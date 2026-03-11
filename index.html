@@ -1,0 +1,2396 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>如皋市睿鑫食品添加剂有限公司 | 专业的防腐剂、甜味剂供应商</title>
+    <meta name="description" content="如皋市睿鑫食品添加剂有限公司，专注食品添加剂贸易与供应链服务，提供高品质防腐剂、甜味剂、着色剂、增稠剂等全品类食品配料方案，保障食品安全。">
+    <meta name="keywords" content="食品添加剂,防腐剂,甜味剂,着色剂,增稠剂,抗氧化剂,酸度调节剂,如皋,睿鑫食品">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="如皋市睿鑫食品添加剂有限公司 | 专业的防腐剂、甜味剂供应商">
+    <meta property="og:description" content="专注食品添加剂领域，为您提供优质防腐剂、甜味剂等安全可靠的食品配料方案。">
+    <meta property="og:image" content="images/og-image.jpg">
+    <style>
+        /* ══════════════════════════════════════════════
+   睿鑫食品添加剂 - 全局样式
+   ══════════════════════════════════════════════ */
+
+        /* ─── Google Font ─── */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+
+        /* ─── CSS Variables ─── */
+        :root {
+            --primary: #0a6e3a;
+            --primary-light: #12a155;
+            --primary-dark: #064d28;
+            --accent: #d4a843;
+            --accent-light: #f0c75e;
+            --bg-dark: #f3fbf4;
+            --bg-card: rgba(255, 255, 255, 0.74);
+            --bg-glass: rgba(255, 255, 255, 0.86);
+            --border-glass: rgba(18, 126, 69, 0.16);
+            --text-primary: #163924;
+            --text-secondary: rgba(22, 57, 36, 0.72);
+            --text-muted: rgba(22, 57, 36, 0.5);
+            --radius: 16px;
+            --radius-sm: 10px;
+            --radius-xs: 6px;
+            --shadow: 0 8px 24px rgba(20, 78, 43, 0.14);
+            --shadow-glow: 0 0 32px rgba(10, 110, 58, 0.12);
+            --transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --font: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            --max-width: 1200px;
+            --nav-height: 72px;
+        }
+
+        /* ─── Reset ─── */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font);
+            background: linear-gradient(180deg, #f8fff8 0%, #edf8ef 55%, #e8f5ea 100%);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-family: var(--font);
+        }
+
+        /* ─── Background Particles ─── */
+        #particles-canvas {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* ─── Navigation ─── */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--nav-height);
+            background: rgba(243, 251, 244, 0.9);
+            backdrop-filter: blur(20px) saturate(1.4);
+            -webkit-backdrop-filter: blur(20px) saturate(1.4);
+            border-bottom: 1px solid var(--border-glass);
+            z-index: 1000;
+            transition: background var(--transition), box-shadow var(--transition);
+        }
+
+        .navbar.scrolled {
+            background: rgba(243, 251, 244, 0.98);
+            box-shadow: 0 4px 24px rgba(20, 78, 43, 0.14);
+        }
+
+        .nav-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 2rem;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            font-size: 1.35rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-logo .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: var(--radius-xs);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: #fff;
+        }
+
+        .nav-logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.25rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            padding: 0.5rem 1.1rem;
+            border-radius: var(--radius-xs);
+            font-size: 0.92rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: all var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--text-primary);
+            background: var(--bg-glass);
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 18px;
+            height: 2px;
+            background: var(--primary-light);
+            border-radius: 2px;
+        }
+
+        .lang-btn {
+            padding: 0.4rem 0.85rem;
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-xs);
+            font-size: 0.82rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-left: 0.5rem;
+            transition: all var(--transition);
+        }
+
+        .lang-btn:hover {
+            background: rgba(212, 168, 67, 0.1);
+            border-color: var(--accent);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            width: 28px;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            display: block;
+            height: 2px;
+            width: 100%;
+            background: var(--text-primary);
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* ─── Mobile Nav ─── */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: var(--nav-height);
+                left: 0;
+                right: 0;
+                background: rgba(243, 251, 244, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: 1.5rem 2rem;
+                gap: 0.5rem;
+                transform: translateY(-120%);
+                opacity: 0;
+                transition: all 0.4s;
+                border-bottom: 1px solid var(--border-glass);
+            }
+
+            .nav-links.open {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            .nav-links a {
+                width: 100%;
+                padding: 0.8rem 1rem;
+            }
+        }
+
+        /* ─── Container ─── */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* ─── Section ─── */
+        .section {
+            padding: 6rem 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header .badge {
+            display: inline-block;
+            padding: 0.35rem 1rem;
+            background: rgba(10, 110, 58, 0.15);
+            border: 1px solid rgba(10, 110, 58, 0.3);
+            border-radius: 50px;
+            font-size: 0.82rem;
+            color: var(--primary-light);
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+
+        .section-header h2 em {
+            font-style: normal;
+            background: linear-gradient(135deg, var(--primary-light), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            max-width: 620px;
+            margin: 0 auto;
+        }
+
+        /* ─── Hero ─── */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-top: var(--nav-height);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 30% 50%, rgba(10, 110, 58, 0.12) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 30%, rgba(212, 168, 67, 0.06) 0%, transparent 50%);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 720px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.45rem 1rem;
+            background: var(--bg-glass);
+            border: 1px solid var(--border-glass);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-badge .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--primary-light);
+            border-radius: 50%;
+            animation: pulse-dot 2s infinite;
+        }
+
+        @keyframes pulse-dot {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: scale(1.4);
+            }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 1.2rem;
+        }
+
+        .hero h1 .gradient-text {
+            background: linear-gradient(135deg, var(--primary-light), var(--accent-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.12rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 540px;
+            line-height: 1.8;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* ─── Buttons ─── */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.85rem 1.8rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(10, 110, 58, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(10, 110, 58, 0.45);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border-glass);
+        }
+
+        .btn-outline:hover {
+            background: var(--bg-glass);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .btn-accent {
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            color: #1c3e29;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(212, 168, 67, 0.3);
+        }
+
+        .btn-accent:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(212, 168, 67, 0.45);
+        }
+
+        /* ─── Contact Conversion ─── */
+        .contact-strip {
+            position: relative;
+            z-index: 2;
+            margin-top: calc(var(--nav-height) + 1rem);
+            margin-bottom: -2rem;
+        }
+
+        .contact-strip-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .contact-strip-card {
+            background: linear-gradient(135deg, rgba(10, 110, 58, 0.2), rgba(212, 168, 67, 0.12));
+            border: 1px solid rgba(18, 161, 85, 0.45);
+            border-radius: var(--radius);
+            padding: 1rem 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .contact-strip-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .contact-strip-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.5rem 0.8rem;
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px solid var(--border-glass);
+            border-radius: 999px;
+            font-size: 0.85rem;
+            color: var(--text-primary);
+            transition: all var(--transition);
+        }
+
+        .contact-chip:hover {
+            border-color: rgba(18, 161, 85, 0.7);
+            transform: translateY(-1px);
+        }
+
+        .contact-float {
+            position: fixed;
+            right: 1rem;
+            bottom: 1rem;
+            z-index: 1200;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .contact-float a {
+            min-width: 128px;
+            justify-content: center;
+            font-size: 0.84rem;
+            padding: 0.62rem 0.9rem;
+            border-radius: 999px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-float .btn-outline {
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .contact-link {
+            color: var(--accent-light);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .contact-link:hover {
+            color: var(--primary-dark);
+        }
+
+        /* ─── Cards ─── */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius);
+            padding: 2rem;
+            transition: all var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary-light), transparent);
+            opacity: 0;
+            transition: opacity var(--transition);
+        }
+
+        .card:hover {
+            background: var(--bg-glass);
+            border-color: rgba(255, 255, 255, 0.12);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, rgba(10, 110, 58, 0.2), rgba(10, 110, 58, 0.05));
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 0.6rem;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+            line-height: 1.7;
+        }
+
+        /* ─── Feature Grid ─── */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* ─── Product Categories ─── */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .category-card {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius);
+            padding: 1.5rem 1.8rem;
+            transition: all var(--transition);
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            background: var(--bg-glass);
+            transform: translateX(6px);
+            border-color: rgba(10, 110, 58, 0.3);
+        }
+
+        .category-icon {
+            flex-shrink: 0;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, rgba(10, 110, 58, 0.15), rgba(212, 168, 67, 0.08));
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+        }
+
+        .category-info h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .category-info p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .category-info .tag {
+            display: inline-block;
+            padding: 0.15rem 0.5rem;
+            background: rgba(10, 110, 58, 0.12);
+            border-radius: 20px;
+            font-size: 0.72rem;
+            color: var(--primary-light);
+            margin-top: 0.4rem;
+            margin-right: 0.3rem;
+        }
+
+        /* ─── Stats Section ─── */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius);
+        }
+
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--primary-light), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: 0.4rem;
+        }
+
+        /* ─── Application Areas ─── */
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .app-item {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius);
+            transition: all var(--transition);
+        }
+
+        .app-item:hover {
+            background: var(--bg-glass);
+            transform: translateY(-4px);
+            border-color: rgba(212, 168, 67, 0.3);
+        }
+
+        .app-item .app-icon {
+            font-size: 2.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .app-item h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        /* ─── CTA Section ─── */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(10, 110, 58, 0.12), rgba(212, 168, 67, 0.06));
+            border: 1px solid rgba(10, 110, 58, 0.15);
+            border-radius: var(--radius);
+            padding: 4rem 3rem;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: var(--text-secondary);
+            max-width: 500px;
+            margin: 0 auto 2rem;
+        }
+
+        /* ─── Footer ─── */
+        .footer {
+            background: rgba(255, 255, 255, 0.66);
+            border-top: 1px solid var(--border-glass);
+            padding: 4rem 0 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            line-height: 1.8;
+        }
+
+        .footer h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            color: var(--text-primary);
+        }
+
+        .footer-links a {
+            display: block;
+            padding: 0.3rem 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            transition: all var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-light);
+            transform: translateX(4px);
+        }
+
+        .footer-contact li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+            padding: 0.4rem 0;
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+        }
+
+        .footer-contact li .icon {
+            flex-shrink: 0;
+            font-size: 1rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-glass);
+            padding-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-muted);
+            font-size: 0.82rem;
+        }
+
+        /* ─── Scroll Reveal ─── */
+        [data-reveal] {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        [data-reveal].revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        [data-reveal="left"] {
+            transform: translateX(-35px);
+        }
+
+        [data-reveal="left"].revealed {
+            transform: translateX(0);
+        }
+
+        [data-reveal="right"] {
+            transform: translateX(35px);
+        }
+
+        [data-reveal="right"].revealed {
+            transform: translateX(0);
+        }
+
+        [data-reveal="scale"] {
+            transform: scale(0.92);
+        }
+
+        [data-reveal="scale"].revealed {
+            transform: scale(1);
+        }
+
+        /* ─── Product Page ─── */
+        .product-filter {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            transition: all var(--transition);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: #fff;
+            border-color: transparent;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .product-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: all var(--transition);
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+            border-color: rgba(10, 110, 58, 0.3);
+        }
+
+        .product-card-header {
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(10, 110, 58, 0.1), rgba(212, 168, 67, 0.05));
+        }
+
+        .product-card-body {
+            padding: 1.5rem;
+        }
+
+        .product-card-body h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+        }
+
+        .product-card-body .spec {
+            font-size: 0.82rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .product-card-body p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* ─── About Page ─── */
+        .about-intro {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-intro-text h2 {
+            font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+            font-weight: 800;
+            margin-bottom: 1.2rem;
+            line-height: 1.3;
+        }
+
+        .about-intro-text p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            border-radius: var(--radius);
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--primary-light), var(--accent), transparent);
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: flex-end;
+            padding: 1rem 0;
+            width: 50%;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(even) {
+            align-self: flex-end;
+            justify-content: flex-start;
+            margin-left: 50%;
+            padding-left: 3rem;
+        }
+
+        .timeline-item:nth-child(odd) {
+            padding-right: 3rem;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            top: 1.6rem;
+            width: 14px;
+            height: 14px;
+            background: var(--primary-light);
+            border: 3px solid var(--bg-dark);
+            border-radius: 50%;
+        }
+
+        .timeline-item:nth-child(odd)::after {
+            right: -7px;
+        }
+
+        .timeline-item:nth-child(even)::after {
+            left: -7px;
+        }
+
+        .timeline-content {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-sm);
+            padding: 1.5rem;
+        }
+
+        .timeline-year {
+            font-size: 0.82rem;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .timeline-content h4 {
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .timeline-content p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+        }
+
+        /* Culture Cards */
+        .culture-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .culture-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius);
+            padding: 2rem;
+            text-align: center;
+            transition: all var(--transition);
+        }
+
+        .culture-card:hover {
+            background: var(--bg-glass);
+            transform: translateY(-4px);
+        }
+
+        .culture-card .culture-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .culture-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .culture-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* ─── Contact Page ─── */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .contact-info-card {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            transition: all var(--transition);
+        }
+
+        .contact-info-card:hover {
+            background: var(--bg-glass);
+            transform: translateX(6px);
+        }
+
+        .contact-info-card .ci-icon {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, rgba(10, 110, 58, 0.2), rgba(10, 110, 58, 0.05));
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+        }
+
+        .contact-info-card h4 {
+            font-size: 0.92rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
+
+        .contact-info-card p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+        }
+
+        .contact-form-wrapper {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius);
+            padding: 2.5rem;
+        }
+
+        .contact-form-wrapper h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 0.4rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-xs);
+            color: var(--text-primary);
+            font-family: var(--font);
+            font-size: 0.92rem;
+            transition: all var(--transition);
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary-light);
+            box-shadow: 0 0 0 3px rgba(10, 110, 58, 0.15);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-group select option {
+            background: var(--bg-dark);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        /* ─── Notification Toast ─── */
+        .toast {
+            position: fixed;
+            top: calc(var(--nav-height) + 1rem);
+            right: 1.5rem;
+            padding: 1rem 1.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: #fff;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            box-shadow: var(--shadow);
+            z-index: 9999;
+            transform: translateX(130%);
+            transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+
+        .toast.show {
+            transform: translateX(0);
+        }
+
+        /* ─── Page Hero Banner ─── */
+        .page-hero {
+            padding: calc(var(--nav-height) + 4rem) 0 3rem;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, rgba(10, 110, 58, 0.1) 0%, transparent 70%);
+            z-index: -1;
+        }
+
+        .page-hero h1 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 900;
+            margin-bottom: 0.8rem;
+        }
+
+        .page-hero p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* ─── Bilingual Toggle ─── */
+        .t-en {
+            display: none;
+        }
+
+        .lang-en .t-en {
+            display: inline;
+        }
+
+        .lang-en .t-zh {
+            display: none;
+        }
+
+        /* ─── Map ─── */
+        .map-container {
+            margin-top: 3rem;
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--border-glass);
+            height: 350px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            filter: none;
+        }
+
+        /* ─── Responsive ─── */
+        @media (max-width: 1024px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-intro {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                max-height: 320px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 0;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 2.5rem;
+                padding-right: 0;
+                justify-content: flex-start;
+            }
+
+            .timeline-item:nth-child(even) {
+                margin-left: 0;
+                padding-left: 2.5rem;
+            }
+
+            .timeline-item::after {
+                left: -7px !important;
+                right: auto !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 4rem 0;
+            }
+
+            .section-header {
+                margin-bottom: 2.5rem;
+            }
+
+            .features-grid,
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+
+            .culture-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .hero h1 {
+                font-size: clamp(1.8rem, 5vw, 2.8rem);
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-strip {
+                margin-top: calc(var(--nav-height) + 0.7rem);
+                margin-bottom: -1.2rem;
+            }
+
+            .contact-strip-inner {
+                padding: 0 1.2rem;
+            }
+
+            .contact-strip-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .contact-float {
+                right: 0.7rem;
+                bottom: 0.7rem;
+            }
+
+            .contact-float a {
+                min-width: 108px;
+                font-size: 0.8rem;
+                padding: 0.55rem 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1.2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .app-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Particles Background -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo">
+                <div class="logo-icon">🧪</div>
+                <span class="t-zh">睿鑫</span><span class="t-en">Ruixin</span><span class="t-zh">食品</span><span
+                    class="t-en"> Food</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="active"><span class="t-zh">首页</span><span class="t-en">Home</span></a>
+                <a href="#products"><span class="t-zh">产品中心</span><span class="t-en">Products</span></a>
+                <a href="#about"><span class="t-zh">关于我们</span><span class="t-en">About</span></a>
+                <a href="#contact"><span class="t-zh">联系我们</span><span class="t-en">Contact</span></a>
+                <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN / 中</button>
+            </div>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="contact-strip">
+        <div class="contact-strip-inner">
+            <div class="contact-strip-card" data-reveal>
+                <p class="contact-strip-title">
+                    <span class="t-zh">30秒快速联系：电话直拨或提交询价，销售经理及时回复</span>
+                    <span class="t-en">Reach us in 30 seconds: call directly or submit inquiry for fast response</span>
+                </p>
+                <div class="contact-strip-actions">
+                    <a class="contact-chip" href="tel:13862761790">📞 13862761790</a>
+                    <a class="contact-chip" href="mailto:987488295@qq.com">📧 987488295@qq.com</a>
+                    <a class="contact-chip" href="#contact">📝 <span class="t-zh">立即询价</span><span class="t-en">Quick
+                            Inquiry</span></a>
+                    <a class="contact-chip" href="tencent://message/?uin=987488295&Site=Ruixin&Menu=yes">💬 QQ:
+                        987488295</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <main id="home">
+
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content" data-reveal>
+                    <div class="hero-badge">
+                        <span class="dot"></span>
+                        <span class="t-zh">专注食品添加剂贸易服务</span>
+                        <span class="t-en">Professional Food Additive Trading</span>
+                    </div>
+                    <h1>
+                        <span class="t-zh">为食品工业提供<br><span class="gradient-text">安全可靠</span>的配料方案</span>
+                        <span class="t-en">Providing <span class="gradient-text">Safe & Reliable</span><br>Ingredient
+                            Solutions</span>
+                    </h1>
+                    <p>
+                        <span class="t-zh">如皋市睿鑫食品添加剂有限公司，立足江苏如皋，辐射全国市场。我们致力于为食品生产企业提供高品质、全品类的食品添加剂供应与专业技术支持。</span>
+                        <span class="t-en">Rugao Ruixin Food Additives Co., Ltd. is based in Rugao, Jiangsu, serving the
+                            national market with high-quality food additive supply and professional technical
+                            support.</span>
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#products" id="btn-hero-explore" class="btn btn-primary">
+                            <span class="t-zh">探索产品</span><span class="t-en">Explore Products</span> →
+                        </a>
+                        <a href="#contact" id="btn-hero-quote" class="btn btn-outline">
+                            <span class="t-zh">获取报价</span><span class="t-en">Get Quote</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="products">
+
+            <section class="page-hero">
+                <div class="container">
+                    <h1 data-reveal>
+                        <span class="t-zh">产品中心</span>
+                        <span class="t-en">Product Center</span>
+                    </h1>
+                    <p data-reveal>
+                        <span class="t-zh">主营核心产品，覆盖防腐、保鲜与配料应用场景</span>
+                        <span class="t-en">Core products for preservative and ingredient application scenarios</span>
+                    </p>
+                </div>
+            </section>
+
+            <!-- Product Filter & Grid -->
+            <section class="section" style="padding-top: 1rem;">
+                <div class="container">
+                    <div class="product-filter" data-reveal>
+                        <button class="filter-btn active" data-filter="all"><span class="t-zh">全部</span><span
+                                class="t-en">All</span></button>
+                        <button class="filter-btn" data-filter="potassium-sorbate"><span class="t-zh">山梨酸钾</span><span
+                                class="t-en">Potassium Sorbate</span></button>
+                        <button class="filter-btn" data-filter="sorbic-acid"><span class="t-zh">山梨酸</span><span
+                                class="t-en">Sorbic Acid</span></button>
+                        <button class="filter-btn" data-filter="calcium-propionate"><span class="t-zh">丙酸钙</span><span
+                                class="t-en">Calcium Propionate</span></button>
+                        <button class="filter-btn" data-filter="phosphate"><span class="t-zh">磷酸盐</span><span
+                                class="t-en">Phosphates</span></button>
+                        <button class="filter-btn" data-filter="soy-protein"><span class="t-zh">大豆分离蛋白</span><span
+                                class="t-en">Soy Protein Isolate</span></button>
+                        <button class="filter-btn" data-filter="dehydrated-scallion"><span class="t-zh">脱水香葱</span><span
+                                class="t-en">Dehydrated Scallion</span></button>
+                    </div>
+
+                    <div class="product-grid" id="productGrid">
+                        <div class="product-card" data-category="potassium-sorbate" data-reveal>
+                            <div class="product-card-header" style="height: 200px; padding: 0;">
+                                <img src="images/prod_potassium_sorbate.png" alt="防腐剂"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="product-card-body">
+                                <h3><span class="t-zh">山梨酸钾</span><span class="t-en">Potassium Sorbate</span></h3>
+                                <div class="spec"><span class="t-zh">食品级 | 含量≥99%</span><span class="t-en">Food Grade |
+                                        Purity
+                                        ≥99%</span></div>
+                                <p><span class="t-zh">高效防腐保鲜，广泛用于饮料、果酱、乳制品、肉制品等食品的防腐保鲜，安全无毒。</span><span
+                                        class="t-en">Efficient
+                                        preservative widely used in beverages, jams, dairy and meat products. Safe and
+                                        non-toxic.</span></p>
+                            </div>
+                        </div>
+                        <div class="product-card" data-category="sorbic-acid" data-reveal>
+                            <div class="product-card-header" style="height: 200px; padding: 0;">
+                                <img src="images/prod_sorbic_acid.png" alt="山梨酸"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="product-card-body">
+                                <h3><span class="t-zh">山梨酸</span><span class="t-en">Sorbic Acid</span></h3>
+                                <div class="spec"><span class="t-zh">食品级 | 含量≥99%</span><span class="t-en">Food Grade |
+                                        Purity
+                                        ≥99%</span></div>
+                                <p><span class="t-zh">经典防腐保鲜原料，对霉菌和酵母抑制效果优良，适用于调味品、烘焙及饮料体系。</span><span
+                                        class="t-en">Classic
+                                        preservative with excellent inhibition on mold and yeast for seasoning, bakery
+                                        and
+                                        beverage systems.</span></p>
+                            </div>
+                        </div>
+                        <div class="product-card" data-category="calcium-propionate" data-reveal>
+                            <div class="product-card-header" style="height: 200px; padding: 0;">
+                                <img src="images/prod_calcium_propionate.png" alt="防腐剂"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="product-card-body">
+                                <h3><span class="t-zh">丙酸钙</span><span class="t-en">Calcium Propionate</span></h3>
+                                <div class="spec"><span class="t-zh">食品级 | 含量≥99%</span><span class="t-en">Food Grade |
+                                        Purity
+                                        ≥99%</span></div>
+                                <p><span class="t-zh">面包烘焙行业首选防腐剂，有效防止霉变，延长面制品货架期。</span><span class="t-en">Preferred
+                                        preservative in bakery industry, effectively prevents mold and extends shelf
+                                        life.</span></p>
+                            </div>
+                        </div>
+                        <div class="product-card" data-category="phosphate" data-reveal>
+                            <div class="product-card-header" style="height: 200px; padding: 0;">
+                                <img src="images/prod_phosphate.png" alt="磷酸盐"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="product-card-body">
+                                <h3><span class="t-zh">磷酸盐</span><span class="t-en">Phosphates</span></h3>
+                                <div class="spec"><span class="t-zh">食品级 | 复配可选</span><span class="t-en">Food Grade |
+                                        Custom
+                                        Blends Available</span></div>
+                                <p><span class="t-zh">用于保水、乳化、稳定与品质改良，适用于肉制品、水产制品及复合调理食品。</span><span class="t-en">Used
+                                        for
+                                        water retention, emulsification and quality improvement in meat, seafood and
+                                        processed
+                                        foods.</span></p>
+                            </div>
+                        </div>
+                        <div class="product-card" data-category="soy-protein" data-reveal>
+                            <div class="product-card-header" style="height: 200px; padding: 0;">
+                                <img src="images/prod_soy_protein_isolate.png" alt="大豆分离蛋白"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="product-card-body">
+                                <h3><span class="t-zh">大豆分离蛋白</span><span class="t-en">Soy Protein Isolate</span></h3>
+                                <div class="spec"><span class="t-zh">食品级 | 蛋白含量高</span><span class="t-en">Food Grade |
+                                        High
+                                        Protein Content</span></div>
+                                <p><span class="t-zh">具备良好乳化、保水与成型特性，适用于肉制品、植物蛋白制品及烘焙配方优化。</span><span
+                                        class="t-en">Provides
+                                        strong emulsifying, water-holding and texturizing properties for meat,
+                                        plant-protein
+                                        and bakery formulations.</span></p>
+                            </div>
+                        </div>
+                        <div class="product-card" data-category="dehydrated-scallion" data-reveal>
+                            <div class="product-card-header" style="height: 200px; padding: 0;">
+                                <img src="images/prod_dehydrated_scallion.png" alt="脱水香葱"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="product-card-body">
+                                <h3><span class="t-zh">脱水香葱</span><span class="t-en">Dehydrated Scallion</span></h3>
+                                <div class="spec"><span class="t-zh">食品级 | 规格可定制</span><span class="t-en">Food Grade |
+                                        Custom
+                                        Cut Sizes</span></div>
+                                <p><span class="t-zh">色泽自然、香气稳定，适用于调味料、方便食品、速冻食品及复合调味应用。</span><span
+                                        class="t-en">Natural color
+                                        and stable aroma for seasonings, instant foods, frozen foods and blended
+                                        spices.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section class="section">
+                <div class="container">
+                    <div class="cta-section" data-reveal="scale">
+                        <h2><span class="t-zh">📋 需要产品报价或技术资料？</span><span class="t-en">📋 Need Product Quotes or
+                                Technical
+                                Data?</span></h2>
+                        <p><span class="t-zh">联系我们获取详细规格书、COA证书和最优价格方案</span><span class="t-en">Contact us for detailed
+                                specifications, COA certificates and best pricing</span></p>
+                        <a href="#contact" id="btn-products-quote" class="btn btn-accent"><span
+                                class="t-zh">立即询价</span><span class="t-en">Request
+                                Quote</span> →</a>
+                    </div>
+                </div>
+            </section>
+
+
+        </section>
+
+
+        <!-- Features Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="badge"><span class="t-zh">核心优势</span><span class="t-en">Core Strengths</span></span>
+                    <h2>
+                        <span class="t-zh">为什么选择<em>睿鑫食品</em>？</span>
+                        <span class="t-en">Why Choose <em>Ruixin Food</em>?</span>
+                    </h2>
+                    <p>
+                        <span class="t-zh">深耕食品添加剂行业，以品质与服务赢得信赖</span>
+                        <span class="t-en">Deep expertise in food additives, earning trust through quality and
+                            service</span>
+                    </p>
+                </div>
+                <div class="features-grid">
+                    <div class="card" data-reveal>
+                        <div class="card-icon">🛡️</div>
+                        <h3><span class="t-zh">品质保证</span><span class="t-en">Quality Assurance</span></h3>
+                        <p><span class="t-zh">所有产品均经过严格检测，符合国家食品安全标准，提供完整的质检报告与合规证书。</span><span class="t-en">All
+                                products
+                                are rigorously tested to meet national food safety standards with complete quality
+                                reports
+                                and compliance certificates.</span></p>
+                    </div>
+                    <div class="card" data-reveal>
+                        <div class="card-icon">🌐</div>
+                        <h3><span class="t-zh">全球采购</span><span class="t-en">Global Sourcing</span></h3>
+                        <p><span class="t-zh">与国内外顶级原料生产商建立稳定合作，甄选全球优质原料，确保产品质量与价格优势。</span><span class="t-en">Stable
+                                partnerships with top domestic and international manufacturers, sourcing premium
+                                ingredients
+                                globally.</span></p>
+                    </div>
+                    <div class="card" data-reveal>
+                        <div class="card-icon">⚡</div>
+                        <h3><span class="t-zh">高效物流</span><span class="t-en">Fast Logistics</span></h3>
+                        <p><span class="t-zh">自有仓储配套完善物流体系，江苏地区可实现24小时快速配送，全国3-5天到达。</span><span class="t-en">Complete
+                                warehousing and logistics system, 24-hour delivery in Jiangsu, 3-5 days
+                                nationwide.</span>
+                        </p>
+                    </div>
+                    <div class="card" data-reveal>
+                        <div class="card-icon">🤝</div>
+                        <h3><span class="t-zh">技术支持</span><span class="t-en">Technical Support</span></h3>
+                        <p><span class="t-zh">专业团队提供配方优化、法规咨询服务，帮助客户解决食品研发与生产中的配料难题。</span><span class="t-en">Expert
+                                team
+                                providing formula optimization and regulatory consultation to help solve ingredient
+                                challenges.</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Application Areas Section -->
+        <section class="section" style="padding-top: 2rem;">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="badge"><span class="t-zh">应用领域</span><span class="t-en">Applications</span></span>
+                    <h2>
+                        <span class="t-zh">覆盖食品工业<em>全场景</em></span>
+                        <span class="t-en">Covering <em>All Scenarios</em> in Food Industry</span>
+                    </h2>
+                </div>
+                <div class="app-grid">
+                    <div class="app-item" data-reveal>
+                        <div class="app-icon">🥤</div>
+                        <h4><span class="t-zh">饮料</span><span class="t-en">Beverages</span></h4>
+                    </div>
+                    <div class="app-item" data-reveal>
+                        <div class="app-icon">🍞</div>
+                        <h4><span class="t-zh">烘焙</span><span class="t-en">Bakery</span></h4>
+                    </div>
+                    <div class="app-item" data-reveal>
+                        <div class="app-icon">🥛</div>
+                        <h4><span class="t-zh">乳制品</span><span class="t-en">Dairy</span></h4>
+                    </div>
+                    <div class="app-item" data-reveal>
+                        <div class="app-icon">🥩</div>
+                        <h4><span class="t-zh">肉制品</span><span class="t-en">Meat</span></h4>
+                    </div>
+                    <div class="app-item" data-reveal>
+                        <div class="app-icon">🍜</div>
+                        <h4><span class="t-zh">调味品</span><span class="t-en">Condiments</span></h4>
+                    </div>
+                    <div class="app-item" data-reveal>
+                        <div class="app-icon">🍫</div>
+                        <h4><span class="t-zh">糖果</span><span class="t-en">Confectionery</span></h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section">
+            <div class="container">
+                <div class="cta-section" data-reveal="scale">
+                    <h2>
+                        <span class="t-zh">🚀 寻找优质食品添加剂供应商？</span>
+                        <span class="t-en">🚀 Looking for Quality Food Additive Supplier?</span>
+                    </h2>
+                    <p>
+                        <span class="t-zh">立即联系我们，获取专属报价方案，专业团队竭诚为您服务</span>
+                        <span class="t-en">Contact us now for a customized quote, our professional team is ready to
+                            serve
+                            you</span>
+                    </p>
+                    <a href="#contact" id="btn-cta-quote" class="btn btn-accent">
+                        <span class="t-zh">立即询价</span><span class="t-en">Request Quote</span> →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <section id="about">
+
+        <section class="page-hero">
+            <div class="container">
+                <h1 data-reveal><span class="t-zh">关于我们</span><span class="t-en">About Us</span></h1>
+                <p data-reveal><span class="t-zh">立足如皋，服务全国，打造领先的食品配料供应链平台</span><span class="t-en">Based in Rugao,
+                        serving
+                        nationwide, building a leading ingredient supply chain</span></p>
+            </div>
+        </section>
+
+        <!-- About Intro -->
+        <section class="section" style="padding-top: 1rem;">
+            <div class="container">
+                <div class="about-intro">
+                    <div class="about-intro-text" data-reveal="left">
+                        <h2><span class="t-zh">专注食品添加剂领域的<br><em
+                                    style="font-style:normal; background: linear-gradient(135deg, var(--primary-light), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">现代化贸易企业</em></span><span
+                                class="t-en">A Modern Trading Enterprise<br>Focused on <em
+                                    style="font-style:normal; background: linear-gradient(135deg, var(--primary-light), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Food
+                                    Additives</em></span></h2>
+                        <p><span
+                                class="t-zh">如皋市睿鑫食品添加剂有限公司是一家专注于食品添加剂贸易与供应链服务的现代化企业。公司坐落于江苏省如皋市，地理位置优越，物流配套完善，辐射长三角及全国市场。</span><span
+                                class="t-en">Rugao Ruixin Food Additives Co., Ltd. is a modern enterprise specializing
+                                in
+                                food additive trading and supply chain services, strategically located in Rugao, Jiangsu
+                                Province.</span></p>
+                        <p><span
+                                class="t-zh">自成立以来，公司秉承"质量第一、客户至上、诚信创新"的经营理念，致力于为食品工业提供高标准的原料供应与技术支持方案。业务涵盖防腐剂、着色剂、甜味剂、增稠剂、抗氧化剂及酸度调节剂等多个品类。</span><span
+                                class="t-en">Since establishment, we uphold "Quality First, Customer Foremost, Integrity
+                                &
+                                Innovation", committed to providing high-standard ingredient supply and technical
+                                solutions
+                                for the food industry.</span></p>
+                        <div style="margin-top: 1.5rem;">
+                            <a href="#contact" id="btn-about-contact" class="btn btn-primary"><span
+                                    class="t-zh">联系我们</span><span class="t-en">Contact Us</span> →</a>
+                        </div>
+                    </div>
+                    <div class="about-image" data-reveal="right">
+                        <img src="images/food_lab_hero.png" alt="睿鑫食品实验室">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Development Timeline -->
+        <section class="section" style="padding-top: 1rem;">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="badge"><span class="t-zh">发展历程</span><span class="t-en">Milestones</span></span>
+                    <h2><span class="t-zh">稳步成长的<em>每一步</em></span><span class="t-en">Every Step of <em>Steady
+                                Growth</em></span></h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item" data-reveal>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2015</div>
+                            <h4><span class="t-zh">公司成立</span><span class="t-en">Company Founded</span></h4>
+                            <p><span class="t-zh">在如皋正式注册成立，开始食品添加剂贸易业务</span><span class="t-en">Officially registered
+                                    in
+                                    Rugao, beginning food additive trading business</span></p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-reveal>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2017</div>
+                            <h4><span class="t-zh">品类扩展</span><span class="t-en">Category Expansion</span></h4>
+                            <p><span class="t-zh">产品线扩展至六大品类，合作客户突破100家</span><span class="t-en">Product line expanded
+                                    to
+                                    six categories, partners exceeded 100</span></p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-reveal>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2020</div>
+                            <h4><span class="t-zh">仓储升级</span><span class="t-en">Warehouse Upgrade</span></h4>
+                            <p><span class="t-zh">建立现代化仓储体系，实现长三角区域快速配送</span><span class="t-en">Modern warehouse system
+                                    established, enabling fast delivery in Yangtze Delta region</span></p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-reveal>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2023</div>
+                            <h4><span class="t-zh">全国布局</span><span class="t-en">Nationwide Reach</span></h4>
+                            <p><span class="t-zh">服务网络覆盖全国，合作伙伴超500家，供应品类200+</span><span class="t-en">Service network
+                                    covers nationwide, 500+ partners, 200+ product types</span></p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-reveal>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2026</div>
+                            <h4><span class="t-zh">数字化转型</span><span class="t-en">Digital Transformation</span></h4>
+                            <p><span class="t-zh">上线数字化供应链管理平台，持续提升客户服务体验</span><span class="t-en">Launch of digital
+                                    supply
+                                    chain management platform, enhancing customer experience</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Corporate Culture -->
+        <section class="section" style="padding-top: 1rem;">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="badge"><span class="t-zh">企业文化</span><span class="t-en">Culture</span></span>
+                    <h2><span class="t-zh">以诚为本，以<em>质</em>取胜</span><span class="t-en">Built on Integrity, <em>Win</em>
+                            with
+                            Quality</span></h2>
+                </div>
+                <div class="culture-grid">
+                    <div class="culture-card" data-reveal>
+                        <div class="culture-icon">🎯</div>
+                        <h3><span class="t-zh">企业使命</span><span class="t-en">Mission</span></h3>
+                        <p><span class="t-zh">为食品行业提供安全、高效、创新的配料方案，让每一份食品更安心</span><span class="t-en">Provide safe,
+                                efficient and innovative ingredient solutions, making every food product safer</span>
+                        </p>
+                    </div>
+                    <div class="culture-card" data-reveal>
+                        <div class="culture-icon">🔭</div>
+                        <h3><span class="t-zh">企业愿景</span><span class="t-en">Vision</span></h3>
+                        <p><span class="t-zh">成为受人尊敬的全国领先食品配料供应商，推动行业健康发展</span><span class="t-en">To become a respected
+                                leading food ingredient supplier nationwide, driving healthy industry growth</span></p>
+                    </div>
+                    <div class="culture-card" data-reveal>
+                        <div class="culture-icon">💎</div>
+                        <h3><span class="t-zh">核心价值观</span><span class="t-en">Values</span></h3>
+                        <p><span class="t-zh">诚信立业、创新驱动、品质为先、合作共赢</span><span class="t-en">Integrity, Innovation,
+                                Quality
+                                First, Win-Win Cooperation</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Strengths -->
+        <section class="section" style="padding-top: 1rem;">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="badge"><span class="t-zh">核心竞争力</span><span class="t-en">Strengths</span></span>
+                    <h2><span class="t-zh">全链路<em>品质保障</em>体系</span><span class="t-en">Full-Chain <em>Quality
+                                Assurance</em>
+                            System</span></h2>
+                </div>
+                <div class="features-grid">
+                    <div class="card" data-reveal>
+                        <div class="card-icon">🔍</div>
+                        <h3><span class="t-zh">严选源头</span><span class="t-en">Source Selection</span></h3>
+                        <p><span class="t-zh">对接国内外顶级原料生产商，严格筛选合格供应商，从源头把控品质</span><span class="t-en">Partnering with
+                                top
+                                manufacturers domestically and internationally, strict supplier screening</span></p>
+                    </div>
+                    <div class="card" data-reveal>
+                        <div class="card-icon">📊</div>
+                        <h3><span class="t-zh">质检严控</span><span class="t-en">Quality Control</span></h3>
+                        <p><span class="t-zh">每批产品均提供完整COA报告，确保产品符合GB标准和客户要求</span><span class="t-en">Complete COA
+                                reports
+                                for every batch, ensuring compliance with GB standards</span></p>
+                    </div>
+                    <div class="card" data-reveal>
+                        <div class="card-icon">🚚</div>
+                        <h3><span class="t-zh">物流保障</span><span class="t-en">Logistics Support</span></h3>
+                        <p><span class="t-zh">自有仓储+合作物流，温控运输保障，确保产品安全高效送达</span><span class="t-en">Own warehouse +
+                                logistics
+                                partners, temperature-controlled transport for safe delivery</span></p>
+                    </div>
+                    <div class="card" data-reveal>
+                        <div class="card-icon">📞</div>
+                        <h3><span class="t-zh">专属服务</span><span class="t-en">Dedicated Service</span></h3>
+                        <p><span class="t-zh">一对一客户经理，快速响应需求，提供定制化配料方案与技术咨询</span><span class="t-en">One-on-one account
+                                managers, rapid response, customized solutions and technical consulting</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </section>
+
+    <section id="contact">
+
+        <section class="page-hero">
+            <div class="container">
+                <h1 data-reveal><span class="t-zh">联系我们</span><span class="t-en">Contact Us</span></h1>
+                <p data-reveal><span class="t-zh">期待与您的合作，专业团队竭诚为您服务</span><span class="t-en">Looking forward to
+                        cooperating
+                        with you, our professional team is at your service</span></p>
+            </div>
+        </section>
+
+        <!-- Contact Content -->
+        <section class="section" style="padding-top: 1rem;">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Contact Info -->
+                    <div class="contact-info-cards" data-reveal="left">
+                        <div class="contact-info-card">
+                            <div class="ci-icon">📞</div>
+                            <div>
+                                <h4><span class="t-zh">联系电话</span><span class="t-en">Phone</span></h4>
+                                <p><a class="contact-link" href="tel:13862761790">13862761790</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-info-card">
+                            <div class="ci-icon">📧</div>
+                            <div>
+                                <h4><span class="t-zh">电子邮箱</span><span class="t-en">Email</span></h4>
+                                <p><a class="contact-link" href="mailto:987488295@qq.com">987488295@qq.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-info-card">
+                            <div class="ci-icon">📍</div>
+                            <div>
+                                <h4><span class="t-zh">公司地址</span><span class="t-en">Address</span></h4>
+                                <p><span class="t-zh">江苏省南通市如皋市长江镇三洞口居4组10号</span><span class="t-en">No.10, Group 4,
+                                        Sandongkou, Changjiang Town, Rugao, Nantong, Jiangsu, China</span></p>
+                            </div>
+                        </div>
+                        <div class="contact-info-card">
+                            <div class="ci-icon">🕐</div>
+                            <div>
+                                <h4><span class="t-zh">工作时间</span><span class="t-en">Business Hours</span></h4>
+                                <p><span class="t-zh">周一至周六 8:00 - 18:00</span><span class="t-en">Mon - Sat 8:00 AM -
+                                        6:00
+                                        PM</span></p>
+                            </div>
+                        </div>
+                        <div class="contact-info-card">
+                            <div class="ci-icon">💬</div>
+                            <div>
+                                <h4>QQ</h4>
+                                <p><a class="contact-link"
+                                        href="tencent://message/?uin=987488295&Site=Ruixin&Menu=yes">987488295</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-wrapper" data-reveal="right">
+                        <h3><span class="t-zh">📝 在线询价</span><span class="t-en">📝 Online Inquiry</span></h3>
+                        <form id="contactForm" action="https://formsubmit.co/610630838@qq.com" method="POST"
+                            onsubmit="handleSubmit(event)">
+                            <input type="hidden" name="_subject" value="🌟 新的官方网站在线询价 / New Inquiry">
+                            <input type="hidden" name="_cc" value="987488295@qq.com">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label><span class="t-zh">您的姓名 *</span><span class="t-en">Your Name *</span></label>
+                                    <input type="text" id="name" name="Name" required placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label><span class="t-zh">联系电话 *</span><span class="t-en">Phone *</span></label>
+                                    <input type="tel" id="phone" name="Phone" required placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label><span class="t-zh">电子邮箱</span><span class="t-en">Email</span></label>
+                                    <input type="email" id="email" name="Email" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label><span class="t-zh">公司名称</span><span class="t-en">Company</span></label>
+                                    <input type="text" id="company" name="Company" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label><span class="t-zh">感兴趣的产品</span><span class="t-en">Products of
+                                        Interest</span></label>
+                                <select id="product" name="Product">
+                                    <option value=""><span class="t-zh">请选择产品类别</span></option>
+                                    <option value="potassium-sorbate">山梨酸钾 / Potassium Sorbate</option>
+                                    <option value="sorbic-acid">山梨酸 / Sorbic Acid</option>
+                                    <option value="calcium-propionate">丙酸钙 / Calcium Propionate</option>
+                                    <option value="phosphate">磷酸盐 / Phosphates</option>
+                                    <option value="soy-protein-isolate">大豆分离蛋白 / Soy Protein Isolate</option>
+                                    <option value="dehydrated-scallion">脱水香葱 / Dehydrated Scallion</option>
+                                    <option value="other">其他 / Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label><span class="t-zh">询价内容 *</span><span class="t-en">Message *</span></label>
+                                <textarea id="message" name="Message" required placeholder=""></textarea>
+                            </div>
+                            <button type="submit" id="btn-submit-inquiry" class="btn btn-primary"
+                                style="width: 100%; justify-content: center;">
+                                <span class="t-zh">提交询价</span><span class="t-en">Submit Inquiry</span> →
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map -->
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="badge"><span class="t-zh">公司位置</span><span class="t-en">Location</span></span>
+                    <h2><span class="t-zh">欢迎来访<em>洽谈合作</em></span><span class="t-en">Welcome to Visit for
+                            <em>Cooperation</em></span></h2>
+                </div>
+                <div class="map-container" data-reveal="scale">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3408.8359424843187!2d120.48529277579893!3d32.14856008116524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35b44fc8034dbfcf%3A0x6ec04a29a5ee0321!2z5rGf6IuP55yB5Y2X6YCa5biC5aaC55qL5biC6ZW_5rGf6ZWH!5e0!3m2!1szh-CN!2scn!4v1714402636952!5m2!1szh-CN!2scn"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="nav-logo" style="margin-bottom: 0.5rem;">
+                        <div class="logo-icon">🧪</div>
+                        <span class="t-zh">睿鑫</span><span class="t-en">Ruixin</span><span class="t-zh">食品</span><span
+                            class="t-en"> Food</span>
+                    </div>
+                    <p><span class="t-zh">如皋市睿鑫食品添加剂有限公司，专注于为食品工业提供安全、高效、创新的配料解决方案。</span><span class="t-en">Rugao
+                            Ruixin Food Additives Co., Ltd. provides safe, efficient and innovative ingredient solutions
+                            for the food industry.</span></p>
+                </div>
+                <div class="footer-links">
+                    <h4><span class="t-zh">快速导航</span><span class="t-en">Quick Links</span></h4>
+                    <a href="#home"><span class="t-zh">首页</span><span class="t-en">Home</span></a>
+                    <a href="#products"><span class="t-zh">产品中心</span><span class="t-en">Products</span></a>
+                    <a href="#about"><span class="t-zh">关于我们</span><span class="t-en">About Us</span></a>
+                    <a href="#contact"><span class="t-zh">联系我们</span><span class="t-en">Contact</span></a>
+                </div>
+                <div class="footer-links">
+                    <h4><span class="t-zh">产品分类</span><span class="t-en">Categories</span></h4>
+                    <a href="#products"><span class="t-zh">防腐剂</span><span class="t-en">Preservatives</span></a>
+                    <a href="#products"><span class="t-zh">甜味剂</span><span class="t-en">Sweeteners</span></a>
+                    <a href="#products"><span class="t-zh">着色剂</span><span class="t-en">Colorants</span></a>
+                    <a href="#products"><span class="t-zh">增稠剂</span><span class="t-en">Thickeners</span></a>
+                </div>
+                <div>
+                    <h4><span class="t-zh">联系方式</span><span class="t-en">Contact</span></h4>
+                    <ul class="footer-contact">
+                        <li><span class="icon">📞</span> <a class="contact-link" href="tel:13862761790">13862761790</a>
+                        </li>
+                        <li><span class="icon">📧</span> <a class="contact-link"
+                                href="mailto:987488295@qq.com">987488295@qq.com</a></li>
+                        <li><span class="icon">📍</span> <span class="t-zh">江苏省南通市如皋市长江镇三洞口居4组10号</span><span
+                                class="t-en">No.10, Group 4, Sandongkou, Changjiang Town, Rugao, Nantong, Jiangsu</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 <span class="t-zh">如皋市睿鑫食品添加剂有限公司</span><span class="t-en">Rugao Ruixin Food Additives Co.,
+                        Ltd.</span></span>
+                <span><span class="t-zh">版权所有</span><span class="t-en">All Rights Reserved</span></span>
+            </div>
+        </div>
+    </footer>
+    <div class="contact-float">
+        <a href="tel:13862761790" class="btn btn-accent">📞 <span class="t-zh">电话咨询</span><span class="t-en">Call
+                Now</span></a>
+        <a href="#contact" class="btn btn-primary">📝 <span class="t-zh">在线询价</span><span class="t-en">Get
+                Quote</span></a>
+        <a href="mailto:987488295@qq.com" class="btn btn-outline">📧 Email</a>
+    </div>
+    <div class="toast" id="toast"></div>
+
+    <script>
+        /* ══════════════════════════════════════════════
+           睿鑫食品添加剂 - Main JavaScript
+           ══════════════════════════════════════════════ */
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initParticles();
+            initNavbar();
+            initReveal();
+            initCounters();
+            initProductFilter();
+            initLang();
+            initQuickContactUX();
+        });
+
+        /* ─── Particle Background ─── */
+        function initParticles() {
+            const canvas = document.getElementById('particles-canvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            let particles = [];
+            const count = 60;
+
+            function resize() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            resize();
+            window.addEventListener('resize', resize);
+
+            class Particle {
+                constructor() { this.reset(); }
+                reset() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height;
+                    this.vx = (Math.random() - 0.5) * 0.3;
+                    this.vy = (Math.random() - 0.5) * 0.3;
+                    this.radius = Math.random() * 1.8 + 0.5;
+                    this.opacity = Math.random() * 0.3 + 0.05;
+                }
+                update() {
+                    this.x += this.vx;
+                    this.y += this.vy;
+                    if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+                    if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+                }
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(18, 161, 85, ${this.opacity})`;
+                    ctx.fill();
+                }
+            }
+
+            for (let i = 0; i < count; i++) particles.push(new Particle());
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                particles.forEach(p => { p.update(); p.draw(); });
+
+                // Draw connections
+                for (let i = 0; i < particles.length; i++) {
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const dx = particles[i].x - particles[j].x;
+                        const dy = particles[i].y - particles[j].y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < 150) {
+                            ctx.beginPath();
+                            ctx.moveTo(particles[i].x, particles[i].y);
+                            ctx.lineTo(particles[j].x, particles[j].y);
+                            ctx.strokeStyle = `rgba(18, 161, 85, ${0.06 * (1 - dist / 150)})`;
+                            ctx.lineWidth = 0.5;
+                            ctx.stroke();
+                        }
+                    }
+                }
+                requestAnimationFrame(animate);
+            }
+            animate();
+        }
+
+        /* ─── Navbar Scroll Effect ─── */
+        function initNavbar() {
+            const navbar = document.getElementById('navbar');
+            if (!navbar) return;
+            window.addEventListener('scroll', () => {
+                navbar.classList.toggle('scrolled', window.scrollY > 50);
+            });
+        }
+
+        /* ─── Mobile Menu Toggle ─── */
+        function toggleMenu() {
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+            if (hamburger && navLinks) {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('open');
+            }
+        }
+
+        function initQuickContactUX() {
+            const navLinksWrap = document.getElementById('navLinks');
+            const hamburger = document.getElementById('hamburger');
+            const navAnchors = document.querySelectorAll('#navLinks a[href^="#"]');
+
+            navAnchors.forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger?.classList.remove('active');
+                    navLinksWrap?.classList.remove('open');
+                });
+            });
+
+            const activate = () => {
+                const hash = window.location.hash || '#home';
+                navAnchors.forEach(a => a.classList.toggle('active', a.getAttribute('href') === hash));
+            };
+            window.addEventListener('hashchange', activate);
+            activate();
+        }
+
+        /* ─── Scroll Reveal (Intersection Observer) ─── */
+        function initReveal() {
+            const elements = document.querySelectorAll('[data-reveal]');
+            if (!elements.length) return;
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        // Stagger animations
+                        setTimeout(() => {
+                            entry.target.classList.add('revealed');
+                        }, index * 80);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+            elements.forEach(el => observer.observe(el));
+        }
+
+        /* ─── Number Counter Animation ─── */
+        function initCounters() {
+            const counters = document.querySelectorAll('[data-count]');
+            if (!counters.length) return;
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCount(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            counters.forEach(el => observer.observe(el));
+        }
+
+        function animateCount(el) {
+            const target = parseInt(el.dataset.count);
+            const duration = 2000;
+            const start = performance.now();
+
+            function update(now) {
+                const elapsed = now - start;
+                const progress = Math.min(elapsed / duration, 1);
+                // Ease out cubic
+                const eased = 1 - Math.pow(1 - progress, 3);
+                const current = Math.floor(eased * target);
+                el.textContent = current + (target >= 100 ? '+' : target === 99 ? '' : '+');
+                if (progress < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
+        }
+
+        /* ─── Product Filter ─── */
+        function initProductFilter() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const productCards = document.querySelectorAll('.product-card');
+            if (!filterBtns.length || !productCards.length) return;
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update active button
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filter = btn.dataset.filter;
+                    productCards.forEach(card => {
+                        if (filter === 'all' || card.dataset.category === filter) {
+                            card.style.display = '';
+                            card.style.animation = 'fadeIn 0.4s ease forwards';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        }
+
+        /* ─── Language Toggle ─── */
+        function initLang() {
+            const stored = localStorage.getItem('ruixin-lang');
+            if (stored === 'en') {
+                document.documentElement.classList.add('lang-en');
+            }
+        }
+
+        function toggleLang() {
+            const html = document.documentElement;
+            html.classList.toggle('lang-en');
+            const isEn = html.classList.contains('lang-en');
+            localStorage.setItem('ruixin-lang', isEn ? 'en' : 'zh');
+        }
+
+        /* ─── Contact Form Handler ─── */
+        function handleSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('name')?.value;
+            const phone = document.getElementById('phone')?.value;
+            const message = document.getElementById('message')?.value;
+
+            if (!name || !phone || !message) {
+                showToast(document.documentElement.classList.contains('lang-en')
+                    ? '⚠️ Please fill in all required fields'
+                    : '⚠️ 请填写所有必填项');
+                return;
+            }
+
+            showToast(document.documentElement.classList.contains('lang-en')
+                ? '📨 Submitting inquiry...'
+                : '📨 正在提交询价...');
+
+            const form = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('btn-submit-inquiry');
+            if (submitBtn) submitBtn.disabled = true;
+            form?.submit();
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            if (!toast) {
+                // Create toast if not exists
+                const t = document.createElement('div');
+                t.className = 'toast';
+                t.id = 'toast';
+                document.body.appendChild(t);
+                return showToast(msg);
+            }
+            toast.textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 3500);
+        }
+
+        /* ─── Fade In Animation ─── */
+        const style = document.createElement('style');
+        style.textContent = `@keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }`;
+        document.head.appendChild(style);
+
+    </script>
+</body>
+
+</html>
