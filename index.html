@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>如皋市睿鑫食品添加剂有限公司 | 专业的防腐剂、甜味剂供应商</title>
-    <meta name="description" content="如皋市睿鑫食品添加剂有限公司，专注食品添加剂贸易与供应链服务，提供高品质防腐剂、甜味剂、着色剂、增稠剂等全品类食品配料方案，保障食品安全。">
-    <meta name="keywords" content="食品添加剂,防腐剂,甜味剂,着色剂,增稠剂,抗氧化剂,酸度调节剂,如皋,睿鑫食品">
+    <title>如皋市睿鑫食品添加剂有限公司 | 专业的防腐保鲜与食品配料供应商</title>
+    <meta name="description" content="如皋市睿鑫食品添加剂有限公司，专注食品添加剂贸易与供应链服务，提供防腐保鲜剂、品质改良剂、植物蛋白配料及天然风味配料等专业食品配料方案。">
+    <meta name="keywords" content="食品添加剂,防腐保鲜剂,品质改良剂,植物蛋白配料,天然风味配料,磷酸盐,山梨酸钾,大豆分离蛋白,如皋,睿鑫食品">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="如皋市睿鑫食品添加剂有限公司 | 专业的防腐剂、甜味剂供应商">
-    <meta property="og:description" content="专注食品添加剂领域，为您提供优质防腐剂、甜味剂等安全可靠的食品配料方案。">
+    <meta property="og:title" content="如皋市睿鑫食品添加剂有限公司 | 专业的防腐保鲜与食品配料供应商">
+    <meta property="og:description" content="专注食品添加剂领域，为您提供防腐保鲜剂、品质改良剂、植物蛋白及天然风味配料等安全可靠的食品配料方案。">
     <meta property="og:image" content="images/og-image.svg">
     <style>
         /* ══════════════════════════════════════════════
@@ -478,6 +478,27 @@
             color: var(--text-secondary);
         }
 
+        .hero-trust {
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+            max-width: 760px;
+        }
+
+        .hero-trust-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.55rem 0.9rem;
+            background: rgba(255, 255, 255, 0.72);
+            border: 1px solid rgba(37, 52, 45, 0.08);
+            border-radius: 999px;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            box-shadow: var(--shadow);
+        }
+
         /* ─── Buttons ─── */
         .btn {
             display: inline-flex;
@@ -543,46 +564,100 @@
         }
 
         .contact-strip-card {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(245, 245, 241, 0.82));
+            background:
+                linear-gradient(135deg, rgba(255, 255, 255, 0.84), rgba(245, 245, 241, 0.9)),
+                radial-gradient(circle at top right, rgba(159, 132, 99, 0.08), transparent 36%);
             border: 1px solid rgba(37, 52, 45, 0.08);
-            border-radius: var(--radius);
-            padding: 1rem 1.3rem;
+            border-radius: 32px;
+            padding: 1.5rem;
             display: flex;
-            align-items: center;
+            align-items: stretch;
             justify-content: space-between;
-            gap: 1rem;
+            gap: 1.6rem;
             box-shadow: var(--shadow);
         }
 
         .contact-strip-title {
-            font-size: 0.95rem;
+            flex: 1 1 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 1.1rem 1.2rem;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.24));
+            border: 1px solid rgba(37, 52, 45, 0.06);
+            border-radius: 24px;
+            font-size: 1.02rem;
             font-weight: 700;
             color: var(--text-primary);
+            line-height: 1.8;
+            letter-spacing: -0.01em;
+        }
+
+        .contact-strip-title strong {
+            display: block;
+            font-size: 0.76rem;
+            font-weight: 700;
+            color: var(--accent);
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            margin-bottom: 0.65rem;
         }
 
         .contact-strip-actions {
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(180px, 1fr));
+            gap: 0.9rem;
+            min-width: min(100%, 560px);
+            padding: 0.2rem;
         }
 
         .contact-chip {
             display: inline-flex;
             align-items: center;
-            gap: 0.35rem;
-            padding: 0.5rem 0.8rem;
-            background: rgba(255, 255, 255, 0.95);
-            border: 1px solid var(--border-glass);
-            border-radius: 999px;
-            font-size: 0.85rem;
+            justify-content: flex-start;
+            gap: 0.55rem;
+            min-height: 70px;
+            padding: 0.95rem 1.1rem;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 248, 245, 0.94));
+            border: 1px solid rgba(37, 52, 45, 0.08);
+            border-radius: 22px;
+            font-size: 0.9rem;
             color: var(--text-primary);
             transition: all var(--transition);
+            box-shadow: 0 10px 24px rgba(33, 44, 39, 0.06);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-chip.primary-chip {
+            background: linear-gradient(135deg, rgba(159, 132, 99, 0.18), rgba(255, 255, 255, 0.98));
+            border-color: rgba(159, 132, 99, 0.18);
+        }
+
+        .contact-chip::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg, rgba(255, 255, 255, 0.4), transparent 45%);
+            pointer-events: none;
+        }
+
+        .contact-chip .chip-emoji {
+            width: 28px;
+            height: 28px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(159, 132, 99, 0.12);
+            font-size: 0.84rem;
+            flex-shrink: 0;
         }
 
         .contact-chip:hover {
             border-color: rgba(37, 52, 45, 0.18);
-            transform: translateY(-1px);
+            transform: translateY(-2px);
+            box-shadow: 0 14px 28px rgba(33, 44, 39, 0.08);
         }
 
         .contact-float {
@@ -1055,6 +1130,27 @@
             color: var(--primary);
         }
 
+        .product-facts {
+            margin-top: 0.95rem;
+            display: grid;
+            gap: 0.55rem;
+        }
+
+        .product-fact {
+            display: flex;
+            align-items: baseline;
+            gap: 0.45rem;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .product-fact strong {
+            color: var(--primary);
+            font-size: 0.78rem;
+            letter-spacing: 0.04em;
+            white-space: nowrap;
+        }
+
         /* ─── About Page ─── */
         .about-intro {
             display: grid;
@@ -1231,6 +1327,36 @@
             color: var(--primary);
             font-size: 0.92rem;
             margin-bottom: 0.35rem;
+        }
+
+        .form-status {
+            display: none;
+            margin-bottom: 1rem;
+            padding: 0.9rem 1rem;
+            border-radius: 16px;
+            border: 1px solid rgba(37, 52, 45, 0.08);
+            font-size: 0.88rem;
+            line-height: 1.7;
+        }
+
+        .form-status.show {
+            display: block;
+        }
+
+        .form-status.success {
+            background: rgba(111, 134, 120, 0.12);
+            color: var(--primary);
+        }
+
+        .form-status.error {
+            background: rgba(159, 99, 99, 0.1);
+            color: #6c3535;
+        }
+
+        .form-hint {
+            margin-top: 0.9rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
         }
 
         .contact-info-cards {
@@ -1528,6 +1654,12 @@
                 align-items: flex-start;
             }
 
+            .contact-strip-actions {
+                grid-template-columns: 1fr;
+                width: 100%;
+                min-width: 0;
+            }
+
             .contact-float {
                 right: 0.7rem;
                 bottom: 0.7rem;
@@ -1572,7 +1704,7 @@
             <div class="nav-links" id="navLinks">
                 <a href="#home" class="active"><span class="t-zh">首页</span><span class="t-en">Home</span></a>
                 <a href="#products"><span class="t-zh">产品中心</span><span class="t-en">Products</span></a>
-                <a href="#about"><span class="t-zh">关于我们</span><span class="t-en">About</span></a>
+                <a href="#about"><span class="t-zh">关于我们</span><span class="t-en">About Us</span></a>
                 <a href="#contact"><span class="t-zh">联系我们</span><span class="t-en">Contact</span></a>
                 <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN / 中</button>
             </div>
@@ -1586,15 +1718,16 @@
         <div class="contact-strip-inner">
             <div class="contact-strip-card" data-reveal>
                 <p class="contact-strip-title">
-                    <span class="t-zh">30秒快速联系：电话直拨或提交询价，销售经理及时回复</span>
-                    <span class="t-en">Reach us in 30 seconds: call directly or submit inquiry for fast response</span>
+                    <strong><span class="t-zh">商务联系</span><span class="t-en">Business Contact</span></strong>
+                    <span class="t-zh">快速建立采购沟通：支持电话直联、邮件资料索取与在线询价，销售经理将尽快响应。</span>
+                    <span class="t-en">Start your sourcing conversation quickly with direct call, email document request, or online inquiry. Our sales team will respond promptly.</span>
                 </p>
                 <div class="contact-strip-actions">
-                    <a class="contact-chip" href="tel:13862761790">📞 13862761790</a>
-                    <a class="contact-chip" href="mailto:987488295@qq.com">📧 987488295@qq.com</a>
-                    <a class="contact-chip" href="#contact">📝 <span class="t-zh">立即询价</span><span class="t-en">Quick
+                    <a class="contact-chip" href="tel:13862761790"><span class="chip-emoji">📞</span>13862761790</a>
+                    <a class="contact-chip" href="mailto:987488295@qq.com"><span class="chip-emoji">✉️</span>987488295@qq.com</a>
+                    <a class="contact-chip primary-chip" href="#contact"><span class="chip-emoji">📝</span><span class="t-zh">立即询价</span><span class="t-en">Quick
                             Inquiry</span></a>
-                    <a class="contact-chip" href="tencent://message/?uin=987488295&Site=Ruixin&Menu=yes">💬 QQ:
+                    <a class="contact-chip" href="tencent://message/?uin=987488295&Site=Ruixin&Menu=yes"><span class="chip-emoji">💬</span>QQ:
                         987488295</a>
                 </div>
             </div>
@@ -1634,17 +1767,22 @@
                     </div>
                     <div class="hero-meta">
                         <div class="hero-stat">
-                            <strong><span class="t-zh">多品类供应</span><span class="t-en">Multi-category Supply</span></strong>
-                            <span><span class="t-zh">覆盖防腐、保鲜、蛋白与复配配料应用</span><span class="t-en">Coverage from preservatives to proteins and blends</span></span>
+                            <strong><span class="t-zh">200+</span><span class="t-en">200+</span></strong>
+                            <span><span class="t-zh">常备与可定制产品规格，覆盖多类食品配料应用</span><span class="t-en">Available and customizable specs across multiple ingredient applications</span></span>
                         </div>
                         <div class="hero-stat">
-                            <strong><span class="t-zh">快速响应</span><span class="t-en">Fast Response</span></strong>
-                            <span><span class="t-zh">报价、规格书与样品需求高效对接</span><span class="t-en">Efficient coordination for quotes, specs, and samples</span></span>
+                            <strong><span class="t-zh">COA / 规格书</span><span class="t-en">COA / Specs</span></strong>
+                            <span><span class="t-zh">支持资料索取、样品沟通与采购前技术确认</span><span class="t-en">Support for documentation, samples, and technical confirmation</span></span>
                         </div>
                         <div class="hero-stat">
-                            <strong><span class="t-zh">企业服务</span><span class="t-en">B2B Service</span></strong>
-                            <span><span class="t-zh">适配工厂采购、外贸合作与长期供货</span><span class="t-en">Built for factory sourcing, export trade, and long-term supply</span></span>
+                            <strong><span class="t-zh">500+</span><span class="t-en">500+</span></strong>
+                            <span><span class="t-zh">合作客户与长期供货网络，适配工厂采购与外贸合作</span><span class="t-en">500+ partner clients and a stable supply network for factory sourcing and export cooperation</span></span>
                         </div>
+                    </div>
+                    <div class="hero-trust">
+                        <div class="hero-trust-chip"><span>✓</span><span class="t-zh">支持报价与样品沟通</span><span class="t-en">Quote and sample support</span></div>
+                        <div class="hero-trust-chip"><span>✓</span><span class="t-zh">可提供 COA / 规格资料</span><span class="t-en">COA and specification documents</span></div>
+                        <div class="hero-trust-chip"><span>✓</span><span class="t-zh">适配长期稳定供货</span><span class="t-en">Built for stable long-term supply</span></div>
                     </div>
                 </div>
             </div>
@@ -1660,7 +1798,7 @@
                     </h1>
                     <p data-reveal>
                         <span class="t-zh">主营核心产品，覆盖防腐、保鲜与配料应用场景</span>
-                        <span class="t-en">Core products for preservative and ingredient application scenarios</span>
+                        <span class="t-en">Core products covering preservation, freshness retention, and ingredient application scenarios</span>
                     </p>
                 </div>
             </section>
@@ -1701,6 +1839,10 @@
                                         class="t-en">Efficient
                                         preservative widely used in beverages, jams, dairy and meat products. Safe and
                                         non-toxic.</span></p>
+                                <div class="product-facts">
+                                    <div class="product-fact"><strong><span class="t-zh">包装</span><span class="t-en">Pack</span></strong><span class="t-zh">常规袋装供货，可沟通定制包装方式</span><span class="t-en">Standard bagged supply with packaging options on request</span></div>
+                                    <div class="product-fact"><strong><span class="t-zh">支持</span><span class="t-en">Support</span></strong><span class="t-zh">支持规格资料、样品与报价对接</span><span class="t-en">Documentation, samples, and quotation support available</span></div>
+                                </div>
                                 <div class="product-card-footer">
                                     <span class="pc-note"><span class="t-zh">适用于饮料与乳制品体系</span><span class="t-en">For beverage and dairy systems</span></span>
                                     <a href="#contact"><span class="t-zh">获取规格</span><span class="t-en">Get Specs</span></a>
@@ -1723,6 +1865,10 @@
                                         preservative with excellent inhibition on mold and yeast for seasoning, bakery
                                         and
                                         beverage systems.</span></p>
+                                <div class="product-facts">
+                                    <div class="product-fact"><strong><span class="t-zh">包装</span><span class="t-en">Pack</span></strong><span class="t-zh">标准工业包装，适配批量采购需求</span><span class="t-en">Industrial standard packing for bulk sourcing</span></div>
+                                    <div class="product-fact"><strong><span class="t-zh">支持</span><span class="t-en">Support</span></strong><span class="t-zh">支持应用建议与资料沟通</span><span class="t-en">Application guidance and document support</span></div>
+                                </div>
                                 <div class="product-card-footer">
                                     <span class="pc-note"><span class="t-zh">适用于调味与烘焙配方</span><span class="t-en">For seasoning and bakery formulas</span></span>
                                     <a href="#contact"><span class="t-zh">获取规格</span><span class="t-en">Get Specs</span></a>
@@ -1743,6 +1889,10 @@
                                 <p><span class="t-zh">面包烘焙行业首选防腐剂，有效防止霉变，延长面制品货架期。</span><span class="t-en">Preferred
                                         preservative in bakery industry, effectively prevents mold and extends shelf
                                         life.</span></p>
+                                <div class="product-facts">
+                                    <div class="product-fact"><strong><span class="t-zh">包装</span><span class="t-en">Pack</span></strong><span class="t-zh">适合烘焙工厂与商用配方批量供货</span><span class="t-en">Suitable for bakery factories and commercial formulas</span></div>
+                                    <div class="product-fact"><strong><span class="t-zh">支持</span><span class="t-en">Support</span></strong><span class="t-zh">支持样品确认与供货方案沟通</span><span class="t-en">Sample confirmation and supply planning support</span></div>
+                                </div>
                                 <div class="product-card-footer">
                                     <span class="pc-note"><span class="t-zh">适用于面包与糕点生产</span><span class="t-en">For bread and pastry production</span></span>
                                     <a href="#contact"><span class="t-zh">获取规格</span><span class="t-en">Get Specs</span></a>
@@ -1765,6 +1915,10 @@
                                         water retention, emulsification and quality improvement in meat, seafood and
                                         processed
                                         foods.</span></p>
+                                <div class="product-facts">
+                                    <div class="product-fact"><strong><span class="t-zh">包装</span><span class="t-en">Pack</span></strong><span class="t-zh">支持复配与定向应用沟通</span><span class="t-en">Blend and application customization support</span></div>
+                                    <div class="product-fact"><strong><span class="t-zh">支持</span><span class="t-en">Support</span></strong><span class="t-zh">可提供品质改良方向建议</span><span class="t-en">Guidance for texture and quality improvement</span></div>
+                                </div>
                                 <div class="product-card-footer">
                                     <span class="pc-note"><span class="t-zh">适用于肉制品与调理食品</span><span class="t-en">For meat and prepared foods</span></span>
                                     <a href="#contact"><span class="t-zh">获取规格</span><span class="t-en">Get Specs</span></a>
@@ -1787,6 +1941,10 @@
                                         strong emulsifying, water-holding and texturizing properties for meat,
                                         plant-protein
                                         and bakery formulations.</span></p>
+                                <div class="product-facts">
+                                    <div class="product-fact"><strong><span class="t-zh">包装</span><span class="t-en">Pack</span></strong><span class="t-zh">适配食品工业批量采购与长期供货</span><span class="t-en">Suitable for industrial sourcing and long-term supply</span></div>
+                                    <div class="product-fact"><strong><span class="t-zh">支持</span><span class="t-en">Support</span></strong><span class="t-zh">支持配方讨论与资料对接</span><span class="t-en">Formula discussion and technical document support</span></div>
+                                </div>
                                 <div class="product-card-footer">
                                     <span class="pc-note"><span class="t-zh">适用于植物蛋白与肉制品</span><span class="t-en">For plant protein and meat products</span></span>
                                     <a href="#contact"><span class="t-zh">获取规格</span><span class="t-en">Get Specs</span></a>
@@ -1808,6 +1966,10 @@
                                         class="t-en">Natural color
                                         and stable aroma for seasonings, instant foods, frozen foods and blended
                                         spices.</span></p>
+                                <div class="product-facts">
+                                    <div class="product-fact"><strong><span class="t-zh">包装</span><span class="t-en">Pack</span></strong><span class="t-zh">支持规格与切型定制沟通</span><span class="t-en">Cut size and specification customization support</span></div>
+                                    <div class="product-fact"><strong><span class="t-zh">支持</span><span class="t-en">Support</span></strong><span class="t-zh">支持样品及应用场景确认</span><span class="t-en">Sample support and application confirmation</span></div>
+                                </div>
                                 <div class="product-card-footer">
                                     <span class="pc-note"><span class="t-zh">适用于调味料与速食应用</span><span class="t-en">For seasonings and convenience foods</span></span>
                                     <a href="#contact"><span class="t-zh">获取规格</span><span class="t-en">Get Specs</span></a>
@@ -1982,12 +2144,13 @@
                                 food additive trading and supply chain services, strategically located in Rugao, Jiangsu
                                 Province.</span></p>
                         <p><span
-                                class="t-zh">自成立以来，公司秉承"质量第一、客户至上、诚信创新"的经营理念，致力于为食品工业提供高标准的原料供应与技术支持方案。业务涵盖防腐剂、着色剂、甜味剂、增稠剂、抗氧化剂及酸度调节剂等多个品类。</span><span
+                                class="t-zh">自成立以来，公司秉承"质量第一、客户至上、诚信创新"的经营理念，致力于为食品工业提供高标准的原料供应与技术支持方案。当前业务聚焦防腐保鲜剂、品质改良剂、植物蛋白配料及天然风味配料等核心品类。</span><span
                                 class="t-en">Since establishment, we uphold "Quality First, Customer Foremost, Integrity
                                 &
                                 Innovation", committed to providing high-standard ingredient supply and technical
                                 solutions
-                                for the food industry.</span></p>
+                                for the food industry, with a current focus on preservatives, quality improvers, plant
+                                protein ingredients, and natural flavor ingredients.</span></p>
                         <div style="margin-top: 1.5rem;">
                             <a href="#contact" id="btn-about-contact" class="btn btn-primary"><span
                                     class="t-zh">联系我们</span><span class="t-en">Contact Us</span> →</a>
@@ -2199,10 +2362,13 @@
                     <!-- Contact Form -->
                     <div class="contact-form-wrapper" data-reveal="right">
                         <h3><span class="t-zh">📝 在线询价</span><span class="t-en">📝 Online Inquiry</span></h3>
-                        <form id="contactForm" action="https://formsubmit.co/610630838@qq.com" method="POST"
+                        <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+                        <form id="contactForm" action="https://formsubmit.co/610630838@qq.com" method="POST" data-ajax-action="https://formsubmit.co/ajax/610630838@qq.com"
                             onsubmit="handleSubmit(event)">
                             <input type="hidden" name="_subject" value="🌟 新的官方网站在线询价 / New Inquiry">
                             <input type="hidden" name="_cc" value="987488295@qq.com">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
                             <div class="form-row">
                                 <div class="form-group">
                                     <label><span class="t-zh">您的姓名 *</span><span class="t-en">Your Name *</span></label>
@@ -2245,6 +2411,7 @@
                                 style="width: 100%; justify-content: center;">
                                 <span class="t-zh">提交询价</span><span class="t-en">Submit Inquiry</span> →
                             </button>
+                            <p class="form-hint"><span class="t-zh">提交后将保留在当前页面，并显示提交结果。如需更快响应，也可直接电话或邮件联系。</span><span class="t-en">You will stay on this page after submission and see the result here. For faster response, feel free to call or email us directly.</span></p>
                         </form>
                     </div>
                 </div>
@@ -2292,10 +2459,10 @@
                 </div>
                 <div class="footer-links">
                     <h4><span class="t-zh">产品分类</span><span class="t-en">Categories</span></h4>
-                    <a href="#products"><span class="t-zh">防腐剂</span><span class="t-en">Preservatives</span></a>
-                    <a href="#products"><span class="t-zh">甜味剂</span><span class="t-en">Sweeteners</span></a>
-                    <a href="#products"><span class="t-zh">着色剂</span><span class="t-en">Colorants</span></a>
-                    <a href="#products"><span class="t-zh">增稠剂</span><span class="t-en">Thickeners</span></a>
+                    <a href="#products"><span class="t-zh">防腐保鲜剂</span><span class="t-en">Preservatives</span></a>
+                    <a href="#products"><span class="t-zh">品质改良剂</span><span class="t-en">Quality Improvers</span></a>
+                    <a href="#products"><span class="t-zh">植物蛋白配料</span><span class="t-en">Plant Protein Ingredients</span></a>
+                    <a href="#products"><span class="t-zh">天然风味配料</span><span class="t-en">Natural Flavor Ingredients</span></a>
                 </div>
                 <div>
                     <h4><span class="t-zh">联系方式</span><span class="t-en">Contact</span></h4>
@@ -2546,22 +2713,80 @@
             const name = document.getElementById('name')?.value;
             const phone = document.getElementById('phone')?.value;
             const message = document.getElementById('message')?.value;
+            const form = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('btn-submit-inquiry');
+            const formStatus = document.getElementById('formStatus');
 
             if (!name || !phone || !message) {
                 showToast(document.documentElement.classList.contains('lang-en')
                     ? '⚠️ Please fill in all required fields'
                     : '⚠️ 请填写所有必填项');
+                setFormStatus('error', document.documentElement.classList.contains('lang-en')
+                    ? 'Please complete all required fields before submitting your inquiry.'
+                    : '请先完整填写所有必填项后再提交询价。');
                 return;
             }
 
             showToast(document.documentElement.classList.contains('lang-en')
                 ? '📨 Submitting inquiry...'
                 : '📨 正在提交询价...');
+            setFormStatus('success', document.documentElement.classList.contains('lang-en')
+                ? 'Submitting your inquiry. Please wait a moment...'
+                : '正在提交询价，请稍候...');
 
-            const form = document.getElementById('contactForm');
-            const submitBtn = document.getElementById('btn-submit-inquiry');
-            if (submitBtn) submitBtn.disabled = true;
-            form?.submit();
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.style.opacity = '0.7';
+            }
+
+            const endpoint = form?.dataset.ajaxAction || '';
+            const formData = new FormData(form);
+
+            fetch(endpoint, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(async (response) => {
+                let payload = null;
+                try {
+                    payload = await response.json();
+                } catch {
+                    payload = null;
+                }
+
+                if (!response.ok || (payload && payload.success === 'false')) {
+                    throw new Error('submit_failed');
+                }
+
+                form?.reset();
+                setFormStatus('success', document.documentElement.classList.contains('lang-en')
+                    ? 'Inquiry submitted successfully. Our team will contact you soon with quotation or product details.'
+                    : '询价提交成功，我们会尽快与您联系并回复报价或产品资料。');
+                showToast(document.documentElement.classList.contains('lang-en')
+                    ? '✅ Inquiry submitted successfully'
+                    : '✅ 询价已成功提交');
+            }).catch(() => {
+                setFormStatus('error', document.documentElement.classList.contains('lang-en')
+                    ? 'Submission failed for now. Please try again later, or contact us directly by phone or email.'
+                    : '当前提交失败，请稍后重试，或直接通过电话、邮箱与我们联系。');
+                showToast(document.documentElement.classList.contains('lang-en')
+                    ? '⚠️ Submission failed, please try again'
+                    : '⚠️ 提交失败，请稍后重试');
+            }).finally(() => {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.style.opacity = '1';
+                }
+            });
+        }
+
+        function setFormStatus(type, msg) {
+            const formStatus = document.getElementById('formStatus');
+            if (!formStatus) return;
+            formStatus.className = `form-status show ${type}`;
+            formStatus.textContent = msg;
         }
 
         function showToast(msg) {
