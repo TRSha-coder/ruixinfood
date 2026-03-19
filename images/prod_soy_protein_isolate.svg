@@ -1,0 +1,46 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="bg" x1="130" y1="84" x2="1050" y2="840" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F5F8F4"/>
+<stop offset="0.56" stop-color="#E3EAE0"/>
+<stop offset="1" stop-color="#D3DCCE"/>
+</linearGradient>
+<linearGradient id="panel" x1="175" y1="128" x2="1054" y2="726" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFFFFF" stop-opacity="0.9"/>
+<stop offset="1" stop-color="#F5F7F3" stop-opacity="0.74"/>
+</linearGradient>
+<linearGradient id="bag" x1="682" y1="183" x2="963" y2="685" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E8DFC4"/>
+<stop offset="1" stop-color="#A38551"/>
+</linearGradient>
+</defs>
+<rect width="1200" height="900" fill="url(#bg)"/>
+<circle cx="1008" cy="135" r="118" fill="#E7EFE5"/>
+<circle cx="183" cy="748" r="146" fill="#E1E8DE"/>
+<rect x="132" y="126" width="936" height="645" rx="34" fill="url(#panel)"/>
+<rect x="181" y="179" width="356" height="475" rx="30" fill="#F2F1EA"/>
+<rect x="181" y="669" width="836" height="36" rx="18" fill="#C4B19A"/>
+<ellipse cx="820" cy="714" rx="169" ry="31" fill="#A68D6F" fill-opacity="0.44"/>
+<ellipse cx="344" cy="714" rx="127" ry="27" fill="#B29C7F" fill-opacity="0.22"/>
+<ellipse cx="352" cy="574" rx="122" ry="34" fill="#F4E3B8"/>
+<ellipse cx="311" cy="555" rx="25" ry="15" fill="#E0C67C"/>
+<ellipse cx="365" cy="539" rx="28" ry="16" fill="#D1B264"/>
+<ellipse cx="407" cy="569" rx="22" ry="13" fill="#E5CE8B"/>
+<ellipse cx="349" cy="585" rx="18" ry="10" fill="#F3E2B2"/>
+<rect x="234" y="235" width="230" height="112" rx="20" fill="#DDD6C6"/>
+<rect x="257" y="259" width="86" height="14" rx="7" fill="#F6F3EC"/>
+<rect x="257" y="288" width="160" height="13" rx="6.5" fill="#ECE7DB"/>
+<rect x="257" y="314" width="128" height="10" rx="5" fill="#F1EDE4"/>
+<path d="M688 208C688 186.461 705.461 169 727 169H923C944.539 169 962 186.461 962 208V639C962 660.539 944.539 678 923 678H727C705.461 678 688 660.539 688 639V208Z" fill="url(#bag)"/>
+<path d="M707 209C707 194.641 718.641 183 733 183H797V678H733C718.641 678 707 666.359 707 652V209Z" fill="#E8DDBF" fill-opacity="0.95"/>
+<path d="M688 208C688 186.461 705.461 169 727 169H923C944.539 169 962 186.461 962 208V252H688V208Z" fill="#F0E6CF" fill-opacity="0.74"/>
+<rect x="767" y="258" width="121" height="78" rx="15" fill="#FBF8EE"/>
+<text x="792" y="307" fill="#685934" font-family="'Noto Sans SC', sans-serif" font-size="30" font-weight="700">RX</text>
+<rect x="746" y="377" width="158" height="164" rx="20" fill="#FAFAFB" fill-opacity="0.95"/>
+<ellipse cx="826" cy="463" rx="57" ry="27" fill="#F1DEB1"/>
+<ellipse cx="808" cy="451" rx="18" ry="10" fill="#DFC67A"/>
+<ellipse cx="844" cy="442" rx="20" ry="11" fill="#D2B465"/>
+<ellipse cx="851" cy="463" rx="15" ry="9" fill="#E5CD89"/>
+<text x="750" y="579" fill="#FFFDF8" font-family="'Noto Sans SC', sans-serif" font-size="26" font-weight="700">大豆分离蛋白</text>
+<text x="750" y="619" fill="#F5EED8" font-family="'Noto Sans SC', sans-serif" font-size="22" font-weight="600">Soy Protein Isolate</text>
+</svg>

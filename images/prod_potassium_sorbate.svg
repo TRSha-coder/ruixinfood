@@ -1,0 +1,47 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="bg" x1="133" y1="82" x2="1048" y2="840" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F5F8F4"/>
+<stop offset="0.56" stop-color="#E3EAE0"/>
+<stop offset="1" stop-color="#D3DCCE"/>
+</linearGradient>
+<linearGradient id="panel" x1="174" y1="129" x2="1051" y2="724" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFFFFF" stop-opacity="0.9"/>
+<stop offset="1" stop-color="#F5F7F3" stop-opacity="0.74"/>
+</linearGradient>
+<linearGradient id="bag" x1="682" y1="183" x2="964" y2="685" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F4D56E"/>
+<stop offset="1" stop-color="#BB8719"/>
+</linearGradient>
+</defs>
+<rect width="1200" height="900" fill="url(#bg)"/>
+<circle cx="1007" cy="135" r="118" fill="#E7EFE5"/>
+<circle cx="183" cy="748" r="146" fill="#E1E8DE"/>
+<rect x="132" y="126" width="936" height="645" rx="34" fill="url(#panel)"/>
+<rect x="132" y="126" width="936" height="645" rx="34" stroke="white" stroke-opacity="0.48" stroke-width="2"/>
+<rect x="181" y="179" width="356" height="475" rx="30" fill="#EEF1EB"/>
+<rect x="181" y="669" width="836" height="36" rx="18" fill="#C4B19A"/>
+<ellipse cx="820" cy="714" rx="169" ry="31" fill="#A68D6F" fill-opacity="0.44"/>
+<ellipse cx="344" cy="714" rx="127" ry="27" fill="#B29C7F" fill-opacity="0.22"/>
+<path d="M226 543C226 513.729 249.729 490 279 490H456C485.271 490 509 513.729 509 543V556H226V543Z" fill="#F7F7F8"/>
+<path d="M246 554C283.096 529.633 322.892 517.45 365.388 517.45C405.858 517.45 442.729 529.633 476 554C456.095 585.333 420.367 601 368.815 601C318.702 601 277.764 585.333 246 554Z" fill="#FFFDF8"/>
+<circle cx="321" cy="551" r="35" fill="#FBFCFD"/>
+<circle cx="374" cy="535" r="27" fill="#F6F7F9"/>
+<circle cx="416" cy="559" r="21" fill="#F7F8FA"/>
+<rect x="233" y="235" width="232" height="112" rx="20" fill="#D9DFD5"/>
+<rect x="257" y="259" width="86" height="14" rx="7" fill="#F4F5F2"/>
+<rect x="257" y="288" width="160" height="13" rx="6.5" fill="#EAEEE8"/>
+<rect x="257" y="314" width="128" height="10" rx="5" fill="#F0F2EE"/>
+<path d="M688 208C688 186.461 705.461 169 727 169H923C944.539 169 962 186.461 962 208V639C962 660.539 944.539 678 923 678H727C705.461 678 688 660.539 688 639V208Z" fill="url(#bag)"/>
+<path d="M707 209C707 194.641 718.641 183 733 183H797V678H733C718.641 678 707 666.359 707 652V209Z" fill="#F6E5AE" fill-opacity="0.95"/>
+<path d="M688 208C688 186.461 705.461 169 727 169H923C944.539 169 962 186.461 962 208V252H688V208Z" fill="#FBE9A5" fill-opacity="0.74"/>
+<rect x="767" y="258" width="121" height="78" rx="15" fill="#FFF8E1"/>
+<text x="792" y="307" fill="#805A12" font-family="'Noto Sans SC', sans-serif" font-size="30" font-weight="700">RX</text>
+<rect x="746" y="377" width="158" height="164" rx="20" fill="#FAFAFB" fill-opacity="0.95"/>
+<circle cx="825" cy="457" r="57" fill="#F6F7F9"/>
+<circle cx="805" cy="445" r="18" fill="#FBFCFD"/>
+<circle cx="842" cy="432" r="16" fill="#F1F4F6"/>
+<circle cx="848" cy="467" r="14" fill="#F8FAFB"/>
+<text x="750" y="579" fill="#FFFDF6" font-family="'Noto Sans SC', sans-serif" font-size="31" font-weight="700">山梨酸钾</text>
+<text x="750" y="619" fill="#FFF2C8" font-family="'Noto Sans SC', sans-serif" font-size="22" font-weight="600">Potassium Sorbate</text>
+</svg>

@@ -1,0 +1,47 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="bg" x1="130" y1="84" x2="1050" y2="840" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F5F8F4"/>
+<stop offset="0.56" stop-color="#E3EAE0"/>
+<stop offset="1" stop-color="#D3DCCE"/>
+</linearGradient>
+<linearGradient id="panel" x1="175" y1="128" x2="1054" y2="726" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFFFFF" stop-opacity="0.9"/>
+<stop offset="1" stop-color="#F5F7F3" stop-opacity="0.74"/>
+</linearGradient>
+<linearGradient id="bag" x1="682" y1="183" x2="963" y2="685" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D8E5B9"/>
+<stop offset="1" stop-color="#6F8F40"/>
+</linearGradient>
+</defs>
+<rect width="1200" height="900" fill="url(#bg)"/>
+<circle cx="1008" cy="135" r="118" fill="#E7EFE5"/>
+<circle cx="183" cy="748" r="146" fill="#E1E8DE"/>
+<rect x="132" y="126" width="936" height="645" rx="34" fill="url(#panel)"/>
+<rect x="181" y="179" width="356" height="475" rx="30" fill="#EDF2E9"/>
+<rect x="181" y="669" width="836" height="36" rx="18" fill="#C4B19A"/>
+<ellipse cx="820" cy="714" rx="169" ry="31" fill="#A68D6F" fill-opacity="0.44"/>
+<ellipse cx="344" cy="714" rx="127" ry="27" fill="#B29C7F" fill-opacity="0.22"/>
+<ellipse cx="350" cy="579" rx="116" ry="31" fill="#F4F7F1"/>
+<rect x="293" y="519" width="11" height="109" rx="5.5" transform="rotate(-18 293 519)" fill="#87AF5D"/>
+<rect x="327" y="496" width="11" height="132" rx="5.5" transform="rotate(-6 327 496)" fill="#70974A"/>
+<rect x="361" y="493" width="12" height="137" rx="6" transform="rotate(8 361 493)" fill="#8CB462"/>
+<rect x="399" y="515" width="11" height="113" rx="5.5" transform="rotate(21 399 515)" fill="#739C4D"/>
+<rect x="259" y="543" width="11" height="88" rx="5.5" transform="rotate(-29 259 543)" fill="#9CBD72"/>
+<rect x="234" y="235" width="230" height="112" rx="20" fill="#D7E1CF"/>
+<rect x="257" y="259" width="86" height="14" rx="7" fill="#F4F8F3"/>
+<rect x="257" y="288" width="160" height="13" rx="6.5" fill="#E8EEE2"/>
+<rect x="257" y="314" width="128" height="10" rx="5" fill="#EEF4E9"/>
+<path d="M688 208C688 186.461 705.461 169 727 169H923C944.539 169 962 186.461 962 208V639C962 660.539 944.539 678 923 678H727C705.461 678 688 660.539 688 639V208Z" fill="url(#bag)"/>
+<path d="M707 209C707 194.641 718.641 183 733 183H797V678H733C718.641 678 707 666.359 707 652V209Z" fill="#E7EFCF" fill-opacity="0.95"/>
+<path d="M688 208C688 186.461 705.461 169 727 169H923C944.539 169 962 186.461 962 208V252H688V208Z" fill="#E3EDCD" fill-opacity="0.74"/>
+<rect x="767" y="258" width="121" height="78" rx="15" fill="#F6FBEE"/>
+<text x="792" y="307" fill="#567133" font-family="'Noto Sans SC', sans-serif" font-size="30" font-weight="700">RX</text>
+<rect x="746" y="377" width="158" height="164" rx="20" fill="#FAFAFB" fill-opacity="0.95"/>
+<rect x="788" y="409" width="9" height="82" rx="4.5" transform="rotate(-16 788 409)" fill="#89B060"/>
+<rect x="816" y="394" width="9" height="99" rx="4.5" transform="rotate(-5 816 394)" fill="#71974C"/>
+<rect x="844" y="393" width="10" height="103" rx="5" transform="rotate(9 844 393)" fill="#8BB462"/>
+<rect x="873" y="410" width="9" height="84" rx="4.5" transform="rotate(18 873 410)" fill="#729C4D"/>
+<text x="751" y="579" fill="#FCFEF9" font-family="'Noto Sans SC', sans-serif" font-size="28" font-weight="700">脱水香葱</text>
+<text x="751" y="619" fill="#ECF5DE" font-family="'Noto Sans SC', sans-serif" font-size="22" font-weight="600">Dehydrated Scallion</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="bg" x1="93" y1="56" x2="1033" y2="618" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F6FFF5"/>
+<stop offset="0.48" stop-color="#E4F4E7"/>
+<stop offset="1" stop-color="#D9ECDE"/>
+</linearGradient>
+<linearGradient id="card" x1="182" y1="92" x2="1007" y2="575" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0.96"/>
+<stop offset="1" stop-color="#F4FBF4" stop-opacity="0.86"/>
+</linearGradient>
+<linearGradient id="gold" x1="654" y1="230" x2="990" y2="481" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F6D571"/>
+<stop offset="1" stop-color="#C8982B"/>
+</linearGradient>
+<filter id="shadow" x="107" y="68" width="988" height="530" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="16"/>
+<feGaussianBlur stdDeviation="22"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.063 0 0 0 0 0.322 0 0 0 0 0.177 0 0 0 0.18 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+</filter>
+</defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<circle cx="1064" cy="63" r="122" fill="#CDE8D4"/>
+<circle cx="132" cy="558" r="149" fill="#E9F6E8"/>
+<g filter="url(#shadow)">
+<rect x="151" y="96" width="900" height="442" rx="34" fill="url(#card)"/>
+</g>
+<rect x="201" y="148" width="136" height="136" rx="26" fill="#0A6E3A"/>
+<path d="M246 182C246 168.745 256.745 158 270 158H316C329.255 158 340 168.745 340 182V230C340 243.255 329.255 254 316 254H270C256.745 254 246 243.255 246 230V182Z" fill="#F7FBF7"/>
+<path d="M271 207C271 193.193 282.193 182 296 182C309.807 182 321 193.193 321 207V231H271V207Z" fill="#D7EBDA"/>
+<path d="M263 231H329V244C329 250.627 323.627 256 317 256H275C268.373 256 263 250.627 263 244V231Z" fill="#D4A843"/>
+<text x="382" y="196" fill="#0C4F2D" font-family="'Noto Sans SC', sans-serif" font-size="48" font-weight="700">如皋市睿鑫食品添加剂有限公司</text>
+<text x="382" y="248" fill="#5C7B66" font-family="'Noto Sans SC', sans-serif" font-size="28" font-weight="500">专业的防腐剂、甜味剂与食品配料供应商</text>
+<text x="382" y="292" fill="#6E8B76" font-family="'Noto Sans SC', sans-serif" font-size="22" font-weight="500">Professional ingredient solutions for preservative, bakery and seasoning applications</text>
+<rect x="201" y="342" width="320" height="126" rx="28" fill="#0E6E3F"/>
+<text x="241" y="392" fill="white" font-family="'Noto Sans SC', sans-serif" font-size="30" font-weight="700">质量稳定</text>
+<text x="241" y="431" fill="#DFF1E3" font-family="'Noto Sans SC', sans-serif" font-size="22" font-weight="500">供应稳定 · 规格清晰 · 应用可靠</text>
+<g>
+<ellipse cx="864" cy="403" rx="140" ry="52" fill="#CAD9CA"/>
+<path d="M746 246C746 228.327 760.327 214 778 214H940C957.673 214 972 228.327 972 246V382C972 399.673 957.673 414 940 414H778C760.327 414 746 399.673 746 382V246Z" fill="url(#gold)"/>
+<path d="M756 246C756 233.85 765.85 224 778 224H824V414H778C765.85 414 756 404.15 756 392V246Z" fill="#F1E6BE" fill-opacity="0.88"/>
+<rect x="785" y="254" width="148" height="88" rx="14" fill="#FFF9E8" fill-opacity="0.94"/>
+<text x="809" y="308" fill="#7F5A13" font-family="'Noto Sans SC', sans-serif" font-size="34" font-weight="700">RX</text>
+<text x="796" y="361" fill="#FFFDF8" font-family="'Noto Sans SC', sans-serif" font-size="22" font-weight="700">Food Ingredients</text>
+<text x="789" y="389" fill="#FFF7D5" font-family="'Noto Sans SC', sans-serif" font-size="18" font-weight="500">Export Ready</text>
+</g>
+</svg>
