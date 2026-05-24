@@ -11,6 +11,29 @@
     <meta property="og:description" content="专注食品添加剂领域，为您提供防腐保鲜剂、品质改良剂、植物蛋白及天然风味配料等安全可靠的食品配料方案。">
     <meta property="og:image" content="images/og-image.svg">
 
+    <!-- JSON-LD Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "如皋市睿鑫食品添加剂有限公司",
+      "alternateName": "Rugao Ruixin Food Additives Co., Ltd.",
+      "image": "images/og-image.svg",
+      "telephone": "13862761790",
+      "email": "987488295@qq.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "三洞口居4组10号",
+        "addressLocality": "如皋市",
+        "addressRegion": "江苏省",
+        "addressCountry": "CN"
+      },
+      "url": "https://ruixinfood.com",
+      "priceRange": "$$",
+      "description": "专业的食品添加剂与配料方案供应商，主营山梨酸钾、山梨酸、丙酸钙、磷酸盐、大豆分离蛋白及脱水香葱等优质防腐保鲜与食品添加原料。"
+    }
+    </script>
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -64,13 +87,18 @@
 
         /* ─── Navbar ─── */
         .navbar {
-            background: var(--white);
+            background: rgba(255, 255, 255, 0.75) !important;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
             box-shadow: var(--shadow-sm);
             padding: 0.6rem 0;
             transition: var(--transition);
         }
         .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.85) !important;
             box-shadow: var(--shadow-md);
+            border-bottom-color: rgba(13, 110, 63, 0.1);
         }
         .navbar-brand {
             font-weight: 700;
@@ -342,11 +370,12 @@
             box-shadow: var(--shadow-sm);
             transition: var(--transition);
             height: 100%;
-            border: 1px solid rgba(0,0,0,0.05);
+            border: 1.5px solid rgba(0,0,0,0.05);
         }
         .product-card:hover {
             transform: translateY(-8px);
-            box-shadow: var(--shadow-lg);
+            box-shadow: 0 20px 40px rgba(13, 110, 63, 0.12);
+            border-color: rgba(13, 110, 63, 0.25);
         }
         .product-card-img {
             height: 200px;
@@ -473,25 +502,32 @@
         }
         .app-item {
             text-align: center;
-            padding: 1.5rem 1rem;
-            background: #fff;
-            border-radius: 16px;
+            padding: 1.8rem 1rem;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 18px;
             box-shadow: var(--shadow-sm);
             transition: var(--transition);
-            border: 1px solid rgba(0,0,0,0.04);
+            border: 1.5px solid rgba(0, 0, 0, 0.03);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
         }
         .app-item:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-md);
-            border-color: var(--primary);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 25px rgba(13, 110, 63, 0.08);
+            border-color: rgba(13, 110, 63, 0.35);
+            background: #fff;
         }
         .app-item .app-icon {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+        .app-item:hover .app-icon {
+            transform: scale(1.18) rotate(5deg);
         }
         .app-item h4 {
             font-size: 0.95rem;
-            font-weight: 600;
+            font-weight: 700;
             color: var(--dark);
         }
 
@@ -771,7 +807,8 @@
         }
         .form-control:focus, .form-select:focus {
             border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(13,110,63,0.1);
+            box-shadow: 0 0 8px rgba(13, 110, 63, 0.25);
+            outline: none;
         }
         .form-label {
             font-size: 0.88rem;
@@ -1083,7 +1120,7 @@
                 <div class="col-lg-4 col-md-6 product-item" data-category="potassium-sorbate" data-aos="fade-up">
                     <div class="product-card">
                         <div class="product-card-img">
-                            <img src="images/prod_potassium_sorbate.jpg" alt="山梨酸钾">
+                            <img src="images/prod_potassium_sorbate.webp" alt="山梨酸钾">
                         </div>
                         <div class="product-card-body">
                             <div class="product-tagline"><span class="t-zh">核心防腐解决方案</span><span class="t-en">Core Preservation Solution</span></div>
@@ -1096,7 +1133,7 @@
                             </div>
                             <div class="product-card-footer">
                                 <span class="note"><span class="t-zh">适用于饮料与乳制品体系</span><span class="t-en">For beverage and dairy systems</span></span>
-                                <a href="#contact"><span class="t-zh">获取规格</span><span class="t-en">Get Specs</span> <i class="bi bi-arrow-right"></i></a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#modal-potassium-sorbate"><span class="t-zh">获取规格</span><span class="t-en">Get Specs</span> <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1106,7 +1143,7 @@
                 <div class="col-lg-4 col-md-6 product-item" data-category="sorbic-acid" data-aos="fade-up" data-aos-delay="100">
                     <div class="product-card">
                         <div class="product-card-img">
-                            <img src="images/prod_sorbic_acid.jpg" alt="山梨酸">
+                            <img src="images/prod_sorbic_acid.webp" alt="山梨酸">
                         </div>
                         <div class="product-card-body">
                             <div class="product-tagline"><span class="t-zh">经典抑菌原料</span><span class="t-en">Classic Antimicrobial Ingredient</span></div>
@@ -1119,7 +1156,7 @@
                             </div>
                             <div class="product-card-footer">
                                 <span class="note"><span class="t-zh">适用于酱料与调味品体系</span><span class="t-en">For sauces and condiment systems</span></span>
-                                <a href="#contact"><span class="t-zh">获取规格</span><span class="t-en">Get Specs</span> <i class="bi bi-arrow-right"></i></a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#modal-sorbic-acid"><span class="t-zh">获取规格</span><span class="t-en">Get Specs</span> <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1129,7 +1166,7 @@
                 <div class="col-lg-4 col-md-6 product-item" data-category="calcium-propionate" data-aos="fade-up" data-aos-delay="200">
                     <div class="product-card">
                         <div class="product-card-img">
-                            <img src="images/prod_calcium_propionate.jpg" alt="丙酸钙">
+                            <img src="images/prod_calcium_propionate.webp" alt="丙酸钙">
                         </div>
                         <div class="product-card-body">
                             <div class="product-tagline"><span class="t-zh">烘焙防霉专家</span><span class="t-en">Bakery Anti-mold Expert</span></div>
@@ -1142,7 +1179,7 @@
                             </div>
                             <div class="product-card-footer">
                                 <span class="note"><span class="t-zh">适用于烘焙与面制品体系</span><span class="t-en">For bakery and flour-based systems</span></span>
-                                <a href="#contact"><span class="t-zh">获取规格</span><span class="t-en">Get Specs</span> <i class="bi bi-arrow-right"></i></a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#modal-calcium-propionate"><span class="t-zh">获取规格</span><span class="t-en">Get Specs</span> <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1152,7 +1189,7 @@
                 <div class="col-lg-4 col-md-6 product-item" data-category="phosphate" data-aos="fade-up">
                     <div class="product-card">
                         <div class="product-card-img">
-                            <img src="images/prod_phosphate.jpg" alt="磷酸盐">
+                            <img src="images/prod_phosphate.webp" alt="磷酸盐">
                         </div>
                         <div class="product-card-body">
                             <div class="product-tagline"><span class="t-zh">品质改良核心</span><span class="t-en">Core Quality Improver</span></div>
@@ -1165,7 +1202,7 @@
                             </div>
                             <div class="product-card-footer">
                                 <span class="note"><span class="t-zh">适用于肉制品与面制品体系</span><span class="t-en">For meat and flour-based systems</span></span>
-                                <a href="#contact"><span class="t-zh">获取规格</span><span class="t-en">Get Specs</span> <i class="bi bi-arrow-right"></i></a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#modal-phosphate"><span class="t-zh">获取规格</span><span class="t-en">Get Specs</span> <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1175,7 +1212,7 @@
                 <div class="col-lg-4 col-md-6 product-item" data-category="soy-protein" data-aos="fade-up" data-aos-delay="100">
                     <div class="product-card">
                         <div class="product-card-img">
-                            <img src="images/prod_soy_protein_isolate.jpg" alt="大豆分离蛋白">
+                            <img src="images/prod_soy_protein_isolate.webp" alt="大豆分离蛋白">
                         </div>
                         <div class="product-card-body">
                             <div class="product-tagline"><span class="t-zh">优质植物蛋白</span><span class="t-en">Premium Plant Protein</span></div>
@@ -1188,7 +1225,7 @@
                             </div>
                             <div class="product-card-footer">
                                 <span class="note"><span class="t-zh">适用于肉制品与健康食品</span><span class="t-en">For meat products and health foods</span></span>
-                                <a href="#contact"><span class="t-zh">获取规格</span><span class="t-en">Get Specs</span> <i class="bi bi-arrow-right"></i></a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#modal-soy-protein"><span class="t-zh">获取规格</span><span class="t-en">Get Specs</span> <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1198,20 +1235,20 @@
                 <div class="col-lg-4 col-md-6 product-item" data-category="dehydrated-scallion" data-aos="fade-up" data-aos-delay="200">
                     <div class="product-card">
                         <div class="product-card-img">
-                            <img src="images/prod_dehydrated_scallion.jpg" alt="脱水香葱">
+                            <img src="images/prod_dehydrated_scallion.webp" alt="脱水香葱">
                         </div>
                         <div class="product-card-body">
                             <div class="product-tagline"><span class="t-zh">天然风味配料</span><span class="t-en">Natural Flavor Ingredient</span></div>
                             <h3><span class="t-zh">脱水香葱</span><span class="t-en">Dehydrated Scallion</span></h3>
                             <span class="product-spec"><span class="t-zh">食品级 | 天然脱水</span><span class="t-en">Food Grade | Naturally Dehydrated</span></span>
-                            <p><span class="t-zh">精选优质香葱，低温脱水加工，保留天然风味与色泽，广泛用于方便食品和调味品。</span><span class="t-en">Selected premium scallions, low-temperature dehydrated to preserve natural flavor and color.</span></p>
+                            <p><span class="t-zh">精选优质香葱，低温脱水加工，保留天然风味与色泽，广泛用于方便食品 and 调味品。</span><span class="t-en">Selected premium scallions, low-temperature dehydrated to preserve natural flavor and color.</span></p>
                             <div class="product-facts">
                                 <div class="product-fact"><strong><span class="t-zh">包装</span><span class="t-en">Pack</span></strong><span class="t-zh">常规袋装供货，可沟通定制包装方式</span><span class="t-en">Standard bagged supply with packaging options on request</span></div>
                                 <div class="product-fact"><strong><span class="t-zh">支持</span><span class="t-en">Support</span></strong><span class="t-zh">支持规格资料、样品与报价对接</span><span class="t-en">Documentation, samples, and quotation support available</span></div>
                             </div>
                             <div class="product-card-footer">
                                 <span class="note"><span class="t-zh">适用于方便食品与调味品</span><span class="t-en">For instant foods and condiments</span></span>
-                                <a href="#contact"><span class="t-zh">获取规格</span><span class="t-en">Get Specs</span> <i class="bi bi-arrow-right"></i></a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#modal-dehydrated-scallion"><span class="t-zh">获取规格</span><span class="t-en">Get Specs</span> <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1860,10 +1897,400 @@
             setTimeout(() => toast.classList.remove('show'), 3500);
         }
 
+        // Pre-fill contact form message when clicking "Inquire Now" inside a modal
+        function inquireProduct(productZh, productEn) {
+            const isEn = document.documentElement.classList.contains('lang-en');
+            const messageInput = document.getElementById('message');
+            if (messageInput) {
+                messageInput.value = isEn 
+                    ? `Hello, I would like to inquire about ${productEn} specifications, samples, and latest pricing.`
+                    : `您好，我想咨询【${productZh}】的产品规格、样品及最新报价。`;
+            }
+            // Close all modals
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(m => {
+                const instance = bootstrap.Modal.getInstance(m);
+                if (instance) instance.hide();
+            });
+            // Smooth scroll to contact
+            setTimeout(() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                    window.scrollTo({
+                        top: contactSection.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            }, 300);
+        }
+
         // Fade in animation
         const style = document.createElement('style');
         style.textContent = `@keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }`;
         document.head.appendChild(style);
     </script>
+
+    <!-- Product Specification Modals -->
+    <!-- 1. 山梨酸钾 -->
+    <div class="modal fade" id="modal-potassium-sorbate" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 rounded-4 shadow-lg">
+                <div class="modal-header border-bottom-0 bg-light rounded-top-4 py-3 px-4">
+                    <h5 class="modal-title fw-bold text-dark">
+                        <span class="t-zh">🧪 山梨酸钾 规格说明书</span>
+                        <span class="t-en">🧪 Potassium Sorbate Specifications</span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped align-middle">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th width="40%"><span class="t-zh">分析项目</span><span class="t-en">Test Item</span></th>
+                                    <th><span class="t-zh">标准指标</span><span class="t-en">Specification Limits</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong><span class="t-zh">外观与性状</span><span class="t-en">Appearance</span></strong></td>
+                                    <td><span class="t-zh">类白色至白色粉末或颗粒</span><span class="t-en">White to off-white granular or crystalline powder</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">含量（以干基计）</span><span class="t-en">Assay (on dry basis)</span></strong></td>
+                                    <td>99.0% - 101.0%</td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">干燥失重</span><span class="t-en">Loss on Drying</span></strong></td>
+                                    <td>≤ 1.0%</td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">酸碱度 (pH)</span><span class="t-en">pH Value</span></strong></td>
+                                    <td>7.0 - 9.0</td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">重金属 (以 Pb 计)</span><span class="t-en">Heavy Metals (as Pb)</span></strong></td>
+                                    <td>≤ 10 ppm</td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">保质期</span><span class="t-en">Shelf Life</span></strong></td>
+                                    <td>24 <span class="t-zh">个月</span><span class="t-en">Months</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">执行标准</span><span class="t-en">Standards</span></strong></td>
+                                    <td>GB 1886.39 / FCC V</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer border-top-0 p-3 bg-light rounded-bottom-4">
+                    <button type="button" class="btn btn-secondary rounded-3" data-bs-dismiss="modal"><span class="t-zh">关闭</span><span class="t-en">Close</span></button>
+                    <button type="button" class="btn btn-success rounded-3 px-4" onclick="inquireProduct('山梨酸钾', 'Potassium Sorbate')"><span class="t-zh">立即询价</span><span class="t-en">Inquire Now</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. 山梨酸 -->
+    <div class="modal fade" id="modal-sorbic-acid" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 rounded-4 shadow-lg">
+                <div class="modal-header border-bottom-0 bg-light rounded-top-4 py-3 px-4">
+                    <h5 class="modal-title fw-bold text-dark">
+                        <span class="t-zh">🧪 山梨酸 规格说明书</span>
+                        <span class="t-en">🧪 Sorbic Acid Specifications</span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped align-middle">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th width="40%"><span class="t-zh">分析项目</span><span class="t-en">Test Item</span></th>
+                                    <th><span class="t-zh">标准指标</span><span class="t-en">Specification Limits</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong><span class="t-zh">外观与性状</span><span class="t-en">Appearance</span></strong></td>
+                                    <td><span class="t-zh">无色结晶或白色结晶性粉末</span><span class="t-en">Colorless crystalline or white crystalline powder</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">含量（以干基计）</span><span class="t-en">Assay (on dry basis)</span></strong></td>
+                                    <td>99.0% - 101.0%</td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">熔点范围</span><span class="t-en">Melting Range</span></strong></td>
+                                    <td>132.0℃ - 135.0℃</td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">干燥失重</span><span class="t-en">Loss on Drying</span></strong></td>
+                                    <td>≤ 0.5%</td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">灼烧残渣</span><span class="t-en">Residue on Ignition</span></strong></td>
+                                    <td>≤ 0.2%</td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">保质期</span><span class="t-en">Shelf Life</span></strong></td>
+                                    <td>24 <span class="t-zh">个月</span><span class="t-en">Months</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">执行标准</span><span class="t-en">Standards</span></strong></td>
+                                    <td>GB 1886.190 / FCC V</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer border-top-0 p-3 bg-light rounded-bottom-4">
+                    <button type="button" class="btn btn-secondary rounded-3" data-bs-dismiss="modal"><span class="t-zh">关闭</span><span class="t-en">Close</span></button>
+                    <button type="button" class="btn btn-success rounded-3 px-4" onclick="inquireProduct('山梨酸', 'Sorbic Acid')"><span class="t-zh">立即询价</span><span class="t-en">Inquire Now</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. 丙酸钙 -->
+    <div class="modal fade" id="modal-calcium-propionate" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 rounded-4 shadow-lg">
+                <div class="modal-header border-bottom-0 bg-light rounded-top-4 py-3 px-4">
+                    <h5 class="modal-title fw-bold text-dark">
+                        <span class="t-zh">烘焙防霉专家 | 丙酸钙规格</span>
+                        <span class="t-en">Bakery Preservative | Calcium Propionate Specs</span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped align-middle">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th width="40%"><span class="t-zh">分析项目</span><span class="t-en">Test Item</span></th>
+                                    <th><span class="t-zh">标准指标</span><span class="t-en">Specification Limits</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong><span class="t-zh">外观与性状</span><span class="t-en">Appearance</span></strong></td>
+                                    <td><span class="t-zh">白色结晶性粉末或颗粒</span><span class="t-en">White crystalline powder or granular</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">含量（以干基计）</span><span class="t-en">Assay (on dry basis)</span></strong></td>
+                                    <td>≥ 99.0%</td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">pH值 (10% 水溶液)</span><span class="t-en">pH Value (10% aq. sol.)</span></strong></td>
+                                    <td>7.0 - 9.0</td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">干燥失重</span><span class="t-en">Loss on Drying</span></strong></td>
+                                    <td>≤ 5.0%</td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">水不溶物</span><span class="t-en">Water Insolubles</span></strong></td>
+                                    <td>≤ 0.15%</td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">保质期</span><span class="t-en">Shelf Life</span></strong></td>
+                                    <td>24 <span class="t-zh">个月</span><span class="t-en">Months</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">执行标准</span><span class="t-en">Standards</span></strong></td>
+                                    <td>GB 25548 / FCC V</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer border-top-0 p-3 bg-light rounded-bottom-4">
+                    <button type="button" class="btn btn-secondary rounded-3" data-bs-dismiss="modal"><span class="t-zh">关闭</span><span class="t-en">Close</span></button>
+                    <button type="button" class="btn btn-success rounded-3 px-4" onclick="inquireProduct('丙酸钙', 'Calcium Propionate')"><span class="t-zh">立即询价</span><span class="t-en">Inquire Now</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. 磷酸盐 -->
+    <div class="modal fade" id="modal-phosphate" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 rounded-4 shadow-lg">
+                <div class="modal-header border-bottom-0 bg-light rounded-top-4 py-3 px-4">
+                    <h5 class="modal-title fw-bold text-dark">
+                        <span class="t-zh">品质改良核心 | 磷酸盐类规格</span>
+                        <span class="t-en">Quality Improver | Phosphates Specs</span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped align-middle">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th width="40%"><span class="t-zh">分析项目</span><span class="t-en">Test Item</span></th>
+                                    <th><span class="t-zh">标准指标</span><span class="t-en">Specification Limits</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong><span class="t-zh">对应产品</span><span class="t-en">Products</span></strong></td>
+                                    <td><span class="t-zh">三聚磷酸钠/焦磷酸钠/六偏磷酸钠/复配磷酸盐</span><span class="t-en">STPP / SAPP / SHMP / Compound Phosphates</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">外观与性状</span><span class="t-en">Appearance</span></strong></td>
+                                    <td><span class="t-zh">白色粉末或细小颗粒</span><span class="t-en">White powder or fine granular</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">主含量 (以各单体计)</span><span class="t-en">Assay</span></strong></td>
+                                    <td>≥ 95.0%</td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">水不溶物</span><span class="t-en">Water Insolubles</span></strong></td>
+                                    <td>≤ 0.2%</td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">重金属 (以 Pb 计)</span><span class="t-en">Heavy Metals (as Pb)</span></strong></td>
+                                    <td>≤ 10 ppm</td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">保质期</span><span class="t-en">Shelf Life</span></strong></td>
+                                    <td>24 <span class="t-zh">个月</span><span class="t-en">Months</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">执行标准</span><span class="t-en">Standards</span></strong></td>
+                                    <td>GB 1886.335 / 食品安全国家标准</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer border-top-0 p-3 bg-light rounded-bottom-4">
+                    <button type="button" class="btn btn-secondary rounded-3" data-bs-dismiss="modal"><span class="t-zh">关闭</span><span class="t-en">Close</span></button>
+                    <button type="button" class="btn btn-success rounded-3 px-4" onclick="inquireProduct('磷酸盐', 'Phosphates')"><span class="t-zh">立即询价</span><span class="t-en">Inquire Now</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. 大豆分离蛋白 -->
+    <div class="modal fade" id="modal-soy-protein" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 rounded-4 shadow-lg">
+                <div class="modal-header border-bottom-0 bg-light rounded-top-4 py-3 px-4">
+                    <h5 class="modal-title fw-bold text-dark">
+                        <span class="t-zh">优质植物蛋白 | 大豆分离蛋白规格</span>
+                        <span class="t-en">Plant Protein | Soy Protein Isolate Specs</span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped align-middle">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th width="40%"><span class="t-zh">分析项目</span><span class="t-en">Test Item</span></th>
+                                    <th><span class="t-zh">标准指标</span><span class="t-en">Specification Limits</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong><span class="t-zh">外观与性状</span><span class="t-en">Appearance</span></strong></td>
+                                    <td><span class="t-zh">淡黄色或类白色粉末，无异味</span><span class="t-en">Light yellow or off-white powder, odorless</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">粗蛋白质 (干基计, N×6.25)</span><span class="t-en">Crude Protein (dry basis)</span></strong></td>
+                                    <td>≥ 90.0%</td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">水分</span><span class="t-en">Moisture</span></strong></td>
+                                    <td>≤ 7.0%</td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">灰分</span><span class="t-en">Ash</span></strong></td>
+                                    <td>≤ 6.0%</td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">细度 (通过 100 目筛)</span><span class="t-en">Fineness (through 100 mesh)</span></strong></td>
+                                    <td>≥ 95.0%</td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">保质期</span><span class="t-en">Shelf Life</span></strong></td>
+                                    <td>12 <span class="t-zh">个月</span><span class="t-en">Months</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">执行标准</span><span class="t-en">Standards</span></strong></td>
+                                    <td>GB/T 20371 / 食品级标准</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer border-top-0 p-3 bg-light rounded-bottom-4">
+                    <button type="button" class="btn btn-secondary rounded-3" data-bs-dismiss="modal"><span class="t-zh">关闭</span><span class="t-en">Close</span></button>
+                    <button type="button" class="btn btn-success rounded-3 px-4" onclick="inquireProduct('大豆分离蛋白', 'Soy Protein Isolate')"><span class="t-zh">立即询价</span><span class="t-en">Inquire Now</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. 脱水香葱 -->
+    <div class="modal fade" id="modal-dehydrated-scallion" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 rounded-4 shadow-lg">
+                <div class="modal-header border-bottom-0 bg-light rounded-top-4 py-3 px-4">
+                    <h5 class="modal-title fw-bold text-dark">
+                        <span class="t-zh">天然风味配料 | 脱水香葱规格</span>
+                        <span class="t-en">Natural Flavor | Dehydrated Scallion Specs</span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped align-middle">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th width="40%"><span class="t-zh">分析项目</span><span class="t-en">Test Item</span></th>
+                                    <th><span class="t-zh">标准指标</span><span class="t-en">Specification Limits</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong><span class="t-zh">外观与颜色</span><span class="t-en">Appearance & Color</span></strong></td>
+                                    <td><span class="t-zh">自然葱绿，切段均匀，无明显杂质</span><span class="t-en">Natural green color, uniform scallion slices</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">原料组成</span><span class="t-en">Ingredients</span></strong></td>
+                                    <td>100% <span class="t-zh">天然小葱，无任何防腐剂添加</span><span class="t-en">Natural green scallion, no additives</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">水分含量</span><span class="t-en">Moisture</span></strong></td>
+                                    <td>≤ 8.0%</td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">脱水方式</span><span class="t-en">Drying Method</span></strong></td>
+                                    <td><span class="t-zh">热风低温烘干 (AD) / 冻干 (FD) 可选</span><span class="t-en">Air Dried (AD) / Freeze Dried (FD) Options</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">保质期</span><span class="t-en">Shelf Life</span></strong></td>
+                                    <td>12 <span class="t-zh">个月</span><span class="t-en">Months</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong><span class="t-zh">执行标准</span><span class="t-en">Standards</span></strong></td>
+                                    <td>Q/RXS 0001S / 企业标准食品级</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer border-top-0 p-3 bg-light rounded-bottom-4">
+                    <button type="button" class="btn btn-secondary rounded-3" data-bs-dismiss="modal"><span class="t-zh">关闭</span><span class="t-en">Close</span></button>
+                    <button type="button" class="btn btn-success rounded-3 px-4" onclick="inquireProduct('脱水香葱', 'Dehydrated Scallion')"><span class="t-zh">立即询价</span><span class="t-en">Inquire Now</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
