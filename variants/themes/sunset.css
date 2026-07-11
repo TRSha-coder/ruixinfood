@@ -1,0 +1,66 @@
+/* ═══ 落日橙晖 Sunset — 暖橙活力风 ═══ */
+:root { --primary:#f4511e; --primary-dark:#d84315; --primary-light:#ff8a65; --dark:#231512; --gray-100:#fbf3ee; --gray-600:#8d7468; --white:#fffdfb; }
+body { background:#fffdfb; color:#231512; }
+.top-bar { background:#1c110d; color:#c4a89a; }
+.top-bar a { color:#c4a89a; }
+.navbar { background:rgba(28,17,13,.85) !important; }
+.nav-link { color:#d8c0b4 !important; }
+.hero-section { background:linear-gradient(165deg,#2d1810 0%,#1c110d 55%,#26100a 100%); }
+.hero-section::before { background:radial-gradient(circle, rgba(244,81,30,.22) 0%, transparent 70%); }
+.hero-section::after { background:radial-gradient(circle, rgba(255,179,0,.12) 0%, transparent 70%); }
+.hero-badge { background:rgba(255,138,101,.1); border-color:rgba(255,138,101,.3); color:#ffd0b8; }
+.hero-badge .dot { background:#ffb300; }
+.hero-section h1 .highlight { background:linear-gradient(90deg,#ffb300 0%,#ff7043 60%,#f4511e 100%); -webkit-background-clip:text; background-clip:text; }
+.hero-section .lead { color:#c4a89a; }
+.hero-stat strong { color:#ffb300; }
+.hero-stat span { color:#c4a89a; }
+.btn-primary-custom, .btn-accent { background:linear-gradient(90deg,#f4511e,#ff7043); }
+.btn-primary-custom:hover, .btn-accent:hover { background:linear-gradient(90deg,#ff5722,#ff8a65); }
+.contact-strip { background:#fbf3ee; border-bottom-color:#f3e2d8; }
+.contact-strip a, .contact-strip .bi { color:#f4511e; }
+.section-bg { background:#fbf3ee; }
+.section-badge { background:rgba(244,81,30,.09); color:#f4511e; }
+.section-header h2 em, .about-content h2 em { color:#f4511e; }
+.section-header p, .about-content p { color:#8d7468; }
+.filter-btn { background:#fbf3ee; color:#231512; }
+.filter-btn:hover { background:#f5e6da; }
+.filter-btn.active { background:#f4511e; color:#fff; }
+.product-card, .feature-card, .value-card, .quality-card, .contact-info-card, .contact-form-wrapper, .timeline-content { background:#fff; border-color:#f3e2d8; border-radius:16px; }
+.product-card:hover, .feature-card:hover, .quality-card:hover, .contact-info-card:hover, .timeline-content:hover { border-color:#ffab91; box-shadow:0 8px 26px rgba(244,81,30,.1); }
+.product-card-img { background:#fbf3ee; }
+.product-spec { background:rgba(255,179,0,.14); color:#b06d00; }
+.product-tagline, .product-card-body p, .product-fact, .feature-card p, .value-card p, .quality-card p, .contact-info-card p, .timeline-content p { color:#8d7468; }
+.product-facts, .product-card-footer { border-top-color:#f8ede5; }
+.product-card-footer a, .contact-info-card a { color:#f4511e; }
+.feature-icon, .quality-icon, .ci-icon { background:rgba(244,81,30,.09); color:#f4511e; }
+.app-item { background:#fbf3ee; border-radius:16px; }
+.app-item:hover { background:#fff; border-color:#ffab91; }
+.stats-section { background:#1c110d; }
+.stat-number { color:#ffb300; }
+.stat-label { color:#c4a89a; }
+.cta-section { background:linear-gradient(120deg,#d84315,#f4511e 60%,#ff8f00); }
+.cta-section::before { background:radial-gradient(circle, rgba(255,255,255,.15) 0%, transparent 70%); }
+.cta-section p { color:#ffe0cc; }
+.btn-accent { background:#fff; color:#d84315; font-weight:600; }
+.btn-accent:hover { background:#fff3e0; color:#bf360c; }
+.about-image, .map-container { border-color:#f3e2d8; border-radius:16px; }
+.timeline::before { background:#f3e2d8; }
+.timeline-item::before { background:#f4511e; border-color:#fffdfb; box-shadow:0 0 0 3px rgba(244,81,30,.16); }
+.timeline-year { color:#f4511e; }
+.value-card { border-left-color:#ffb300; }
+.form-control:focus, .form-select:focus { border-color:#f4511e; box-shadow:0 0 0 4px rgba(244,81,30,.12); }
+.footer { background:#fbf3ee; border-top-color:#f3e2d8; color:#8d7468; }
+.footer h5, .footer a:hover { color:#231512; }
+.footer a { color:#8d7468; }
+.footer-bottom { border-top-color:#e8d2c4; }
+.footer .brand-icon-sm { background:rgba(244,81,30,.1); color:#f4511e; }
+.contact-float .float-phone { background:#f4511e; }
+.contact-float .float-inquiry { background:#1c110d; }
+.contact-float .float-email { background:#b06d00; }
+.back-to-top { background:rgba(255,253,251,.88); border-color:rgba(244,81,30,.2); color:#f4511e; }
+.toast-msg { background:#231512; }
+.btn-pill-light { background:#fbf3ee; color:#231512; }
+.btn-pill-light:hover { background:#f5e6da; }
+.modal-header.bg-light, .modal-footer.bg-light { background:#fbf3ee !important; }
+a:focus-visible, button:focus-visible { outline-color:#f4511e; }
+::selection { background:rgba(244,81,30,.18); }
