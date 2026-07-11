@@ -1,0 +1,77 @@
+/* ═══ 赛博霓虹 Cyber Neon — 深空底 + 青紫霓虹 ═══ */
+:root { --primary:#00e5ff; --primary-dark:#00b8d4; --primary-light:#6effff; --dark:#e8f4ff; --gray-100:#111827; --gray-200:#1f2a3f; --gray-600:#8b9bb5; --white:#0a0e1a; }
+body { background:#0a0e1a; color:#e8f4ff; }
+h1, h2, h3, .stat-number, .timeline-year { font-family:Consolas, "Cascadia Code", monospace !important; }
+.top-bar { background:#060912; color:#8b9bb5; border-bottom-color:rgba(0,229,255,.15); }
+.navbar { background:rgba(6,9,18,.85) !important; border-bottom-color:rgba(0,229,255,.2); }
+.navbar-brand .brand-icon { background:rgba(0,229,255,.12); box-shadow:0 0 12px rgba(0,229,255,.4); }
+.nav-link.active::after { background:#00e5ff; box-shadow:0 0 8px #00e5ff; }
+.hero-section { background:#0a0e1a; }
+.hero-section::before { background:radial-gradient(circle, rgba(0,229,255,.14) 0%, transparent 70%); }
+.hero-section::after { background:radial-gradient(circle, rgba(255,46,196,.12) 0%, transparent 70%); }
+.hero-badge { border-color:rgba(0,229,255,.35); color:#6effff; background:rgba(0,229,255,.06); }
+.hero-badge .dot { background:#ff2ec4; box-shadow:0 0 8px #ff2ec4; }
+.hero-section h1 .highlight { background:linear-gradient(90deg,#00e5ff 0%,#ff2ec4 100%); -webkit-background-clip:text; background-clip:text; }
+.hero-section .lead { color:#8b9bb5; }
+.hero-stat strong { color:#00e5ff; text-shadow:0 0 14px rgba(0,229,255,.5); }
+.btn-primary-custom, .btn-accent { background:linear-gradient(90deg,#00b8d4,#7c4dff); box-shadow:0 0 18px rgba(0,229,255,.35) !important; }
+.btn-primary-custom:hover, .btn-accent:hover { background:linear-gradient(90deg,#00e5ff,#9575ff); }
+.btn-outline-custom { border-color:rgba(0,229,255,.5); color:#6effff; }
+.btn-outline-custom:hover { background:rgba(0,229,255,.1); border-color:#00e5ff; color:#fff; }
+.contact-strip { background:#0d1322; border-bottom-color:rgba(0,229,255,.15); color:#e8f4ff; }
+.contact-strip a { color:#00e5ff; }
+.section-bg { background:#0d1322; }
+.section-badge { background:rgba(255,46,196,.1); color:#ff2ec4; border:1px solid rgba(255,46,196,.3); }
+.section-header h2 { color:#e8f4ff; }
+.section-header h2 em, .about-content h2 em { color:#00e5ff; text-shadow:0 0 12px rgba(0,229,255,.5); }
+.section-header p, .about-content p { color:#8b9bb5; }
+.filter-btn { background:#111827; color:#8b9bb5; border:1px solid #1f2a3f; }
+.filter-btn:hover { border-color:rgba(0,229,255,.4); color:#e8f4ff; }
+.filter-btn.active { background:rgba(0,229,255,.12); color:#00e5ff; border-color:#00e5ff; box-shadow:0 0 12px rgba(0,229,255,.3); }
+.product-card, .feature-card, .value-card, .quality-card, .contact-info-card, .contact-form-wrapper, .timeline-content { background:#0f1626; border-color:#1f2a3f; border-radius:8px; }
+.product-card:hover, .feature-card:hover, .quality-card:hover, .contact-info-card:hover, .timeline-content:hover { border-color:rgba(0,229,255,.5); box-shadow:0 0 24px rgba(0,229,255,.12); }
+.product-card-img { background:#0a0e1a; }
+.product-card-body h3, .feature-card h3, .value-card h3, .quality-card h3, .contact-info-card h4, .contact-form-wrapper h3, .timeline-content h4, .app-item h4 { color:#e8f4ff; }
+.product-spec { background:rgba(0,229,255,.08); color:#00e5ff; }
+.product-tagline, .product-card-body p, .product-fact, .feature-card p, .value-card p, .quality-card p, .contact-info-card p, .timeline-content p { color:#8b9bb5; }
+.product-fact strong { color:#e8f4ff; }
+.product-facts, .product-card-footer { border-top-color:#1f2a3f; }
+.product-card-footer a, .contact-info-card a { color:#00e5ff; }
+.feature-icon, .quality-icon, .ci-icon { background:rgba(124,77,255,.15); color:#b39dff; }
+.app-item { background:#0f1626; border:1px solid #1f2a3f; }
+.app-item:hover { background:#131b30; border-color:rgba(255,46,196,.5); }
+.stats-section { background:#060912; }
+.stat-label { color:#8b9bb5; }
+.cta-section { background:#0f1626; border:1px solid rgba(124,77,255,.35); }
+.cta-section::before { background:radial-gradient(circle, rgba(255,46,196,.14) 0%, transparent 70%); }
+.cta-section p { color:#8b9bb5; }
+.about-image, .map-container { border-color:#1f2a3f; }
+.map-container { filter:invert(0.88) hue-rotate(180deg); }
+.timeline::before { background:linear-gradient(180deg,#00e5ff,#ff2ec4); width:2px; }
+.timeline-item::before { background:#ff2ec4; border-color:#0a0e1a; box-shadow:0 0 10px rgba(255,46,196,.6); }
+.timeline-year { color:#00e5ff; }
+.value-card { border-left-color:#ff2ec4; }
+.form-control, .form-select { background:#0a0e1a; border-color:#1f2a3f; color:#e8f4ff; }
+.form-control:focus, .form-select:focus { background:#0a0e1a; color:#e8f4ff; border-color:#00e5ff; box-shadow:0 0 0 4px rgba(0,229,255,.15); }
+.form-label { color:#e8f4ff; }
+.footer { background:#060912; border-top-color:rgba(0,229,255,.15); color:#8b9bb5; }
+.footer h5 { color:#e8f4ff; }
+.footer a { color:#8b9bb5; }
+.footer a:hover { color:#00e5ff; }
+.footer .text-dark { color:#e8f4ff !important; }
+.footer-bottom { border-top-color:#1f2a3f; }
+.footer .brand-icon-sm { background:rgba(0,229,255,.12); color:#00e5ff; }
+.contact-float .float-phone { background:linear-gradient(90deg,#00b8d4,#00e5ff); color:#031318; }
+.contact-float .float-inquiry { background:linear-gradient(90deg,#7c4dff,#ff2ec4); }
+.contact-float .float-email { background:#1f2a3f; }
+.back-to-top { background:rgba(15,22,38,.85); border-color:rgba(0,229,255,.3); color:#00e5ff; }
+.toast-msg { background:#00e5ff; color:#031318; }
+.btn-pill-light { background:#1f2a3f; color:#e8f4ff; }
+.btn-pill-light:hover { background:#2a3752; color:#fff; }
+.modal-content { background:#0f1626; color:#e8f4ff; border:1px solid rgba(0,229,255,.3) !important; }
+.modal-header.bg-light, .modal-footer.bg-light { background:#131b30 !important; }
+.modal-title.text-dark { color:#e8f4ff !important; }
+.btn-close { filter:invert(1); }
+.table { --bs-table-bg:#0f1626; --bs-table-color:#d7e6ff; --bs-table-striped-bg:#131b30; --bs-table-striped-color:#d7e6ff; --bs-table-border-color:#1f2a3f; }
+a:focus-visible, button:focus-visible { outline-color:#00e5ff; }
+::selection { background:rgba(255,46,196,.35); color:#fff; }

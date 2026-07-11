@@ -1,0 +1,62 @@
+/* ═══ 暖阳纸感 Parchment — 米色纸张 + 衬线标题 ═══ */
+:root { --primary:#a0622d; --primary-dark:#844f22; --primary-light:#c58a52; --dark:#3e2f1c; --gray-100:#f3ecdf; --gray-600:#8a7a63; --white:#faf6ef; }
+body { background:#faf6ef; color:#3e2f1c; }
+h1, h2, h3, h4, h5, .stat-number, .timeline-year, .navbar-brand { font-family:Georgia, "Times New Roman", "Songti SC", SimSun, serif !important; letter-spacing:0 !important; }
+.top-bar { background:#2b2119; color:#c9b99f; border-bottom-color:rgba(255,255,255,.08); }
+.top-bar a { color:#c9b99f; }
+.navbar { background:rgba(43,33,25,.88) !important; border-bottom-color:rgba(255,255,255,.08); }
+.navbar-brand { color:#f3ecdf !important; }
+.nav-link { color:#c9b99f !important; }
+.nav-link:hover, .nav-link.active { color:#fff !important; }
+.hero-section { background:#2b2119; }
+.hero-section::before { background:radial-gradient(circle, rgba(197,138,82,.18) 0%, transparent 70%); }
+.hero-section::after { background:radial-gradient(circle, rgba(160,98,45,.12) 0%, transparent 70%); }
+.hero-badge { background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.14); color:#f3ecdf; }
+.hero-badge .dot { background:#c58a52; }
+.hero-section h1 .highlight { background:linear-gradient(180deg,#f7e8d0 0%,#c58a52 100%); -webkit-background-clip:text; background-clip:text; }
+.hero-section .lead { color:#c9b99f; }
+.hero-stats { border-top-color:rgba(255,255,255,.12); }
+.hero-stat span { color:#c9b99f; }
+.btn-primary-custom, .btn-accent { background:#a0622d; }
+.btn-primary-custom:hover, .btn-accent:hover { background:#b5723a; }
+.contact-strip { background:#f3ecdf; border-bottom-color:#e2d6c0; }
+.section-badge { background:rgba(160,98,45,.1); color:#a0622d; letter-spacing:.12em; }
+.section-header h2 em, .about-content h2 em { color:#a0622d; }
+.section-header p, .about-content p { color:#8a7a63; }
+.filter-btn { background:#f3ecdf; color:#3e2f1c; }
+.filter-btn:hover { background:#e9dfc9; }
+.filter-btn.active { background:#3e2f1c; color:#faf6ef; }
+.product-card, .feature-card, .value-card, .quality-card, .contact-info-card, .contact-form-wrapper, .timeline-content { background:#fffdf8; border-color:#e2d6c0; border-radius:6px; }
+.product-card:hover, .feature-card:hover, .quality-card:hover, .contact-info-card:hover, .timeline-content:hover { border-color:#c9b280; }
+.product-card-img { background:#f3ecdf; border-radius:4px; }
+.product-spec { background:rgba(160,98,45,.08); color:#a0622d; }
+.product-tagline, .product-card-body p, .product-fact, .feature-card p, .value-card p, .quality-card p, .contact-info-card p, .timeline-content p { color:#8a7a63; }
+.product-facts, .product-card-footer { border-top-color:#f0e8d8; }
+.product-card-footer a { color:#a0622d; }
+.feature-icon, .quality-icon, .ci-icon { background:rgba(160,98,45,.1); color:#a0622d; border-radius:6px; }
+.app-item { background:#f3ecdf; border-radius:6px; }
+.app-item:hover { background:#fffdf8; border-color:#c9b280; }
+.stats-section { background:#2b2119; }
+.stat-label { color:#c9b99f; }
+.cta-section { background:#2b2119; border-radius:8px; }
+.cta-section::before { background:radial-gradient(circle, rgba(197,138,82,.15) 0%, transparent 70%); }
+.cta-section p { color:#c9b99f; }
+.about-image, .map-container { border-color:#e2d6c0; border-radius:6px; }
+.timeline::before { background:#e2d6c0; }
+.timeline-item::before { background:#a0622d; border-color:#faf6ef; box-shadow:0 0 0 3px rgba(160,98,45,.18); }
+.timeline-year { color:#a0622d; }
+.value-card { border-left-color:#a0622d; }
+.form-control, .form-select { background:#fffdf8; border-color:#d8c9ab; border-radius:4px; }
+.form-control:focus, .form-select:focus { border-color:#a0622d; box-shadow:0 0 0 4px rgba(160,98,45,.14); }
+.footer { background:#f3ecdf; border-top-color:#e2d6c0; color:#8a7a63; }
+.footer h5, .footer a:hover { color:#3e2f1c; }
+.footer a { color:#8a7a63; }
+.footer-bottom { border-top-color:#d8c9ab; }
+.contact-float .float-phone { background:#a0622d; }
+.contact-float .float-inquiry { background:#3e2f1c; }
+.contact-float .float-email { background:#8a7a63; }
+.back-to-top { background:rgba(255,253,248,.85); border-color:rgba(62,47,28,.15); color:#3e2f1c; }
+.btn-pill-light { background:#f3ecdf; color:#3e2f1c; }
+.btn-pill-light:hover { background:#e9dfc9; }
+a:focus-visible, button:focus-visible { outline-color:#a0622d; }
+::selection { background:rgba(160,98,45,.22); }

@@ -1,0 +1,72 @@
+/* ═══ 马卡龙粉彩 Macaron — 柔和粉彩 + 大圆角 ═══ */
+:root { --primary:#ec6ba9; --primary-dark:#d84f92; --primary-light:#f8a8cd; --dark:#4a3b4a; --gray-100:#fdf0f5; --gray-600:#9b8496; --white:#fffafc; }
+body { background:#fffafc; color:#4a3b4a; }
+.top-bar { background:#4a3b4a; color:#e8d3e0; }
+.top-bar a { color:#e8d3e0; }
+.navbar { background:rgba(74,59,74,.85) !important; }
+.navbar-brand .brand-icon { background:rgba(248,168,205,.3); }
+.nav-link { color:#e8d3e0 !important; }
+.hero-section { background:linear-gradient(150deg,#5a4460 0%,#4a3b4a 55%,#3d4a63 100%); }
+.hero-section::before { background:radial-gradient(circle, rgba(248,168,205,.25) 0%, transparent 70%); }
+.hero-section::after { background:radial-gradient(circle, rgba(150,196,255,.18) 0%, transparent 70%); }
+.hero-badge { background:rgba(248,168,205,.14); border-color:rgba(248,168,205,.35); color:#fbd3e6; }
+.hero-badge .dot { background:#f8a8cd; }
+.hero-section h1 .highlight { background:linear-gradient(90deg,#f8a8cd 0%,#c5b3f6 50%,#96c4ff 100%); -webkit-background-clip:text; background-clip:text; }
+.hero-section .lead { color:#d9c8d6; }
+.hero-stat span { color:#d9c8d6; }
+.btn-primary-custom, .btn-accent { background:#ec6ba9; box-shadow:0 6px 18px rgba(236,107,169,.35) !important; }
+.btn-primary-custom:hover, .btn-accent:hover { background:#f27eb5; }
+.contact-strip { background:#fdf0f5; border-bottom-color:#f8dfeb; }
+.contact-strip a, .contact-strip .bi { color:#ec6ba9; }
+.section-bg { background:#fdf4f8; }
+.section-badge { background:rgba(236,107,169,.1); color:#ec6ba9; }
+.section-header h2 em, .about-content h2 em { color:#ec6ba9; }
+.section-header p, .about-content p { color:#9b8496; }
+.filter-btn { background:#fdf0f5; color:#4a3b4a; }
+.filter-btn:hover { background:#fbe3ee; }
+.filter-btn.active { background:#ec6ba9; color:#fff; }
+.product-card, .feature-card, .value-card, .quality-card, .contact-info-card, .contact-form-wrapper, .timeline-content { background:#fff; border-color:#f8dfeb; border-radius:28px; box-shadow:0 6px 24px rgba(236,107,169,.07); }
+.product-card:hover, .feature-card:hover, .quality-card:hover, .contact-info-card:hover, .timeline-content:hover { border-color:#f4b8d6; box-shadow:0 10px 32px rgba(236,107,169,.14); transform:translateY(-3px); }
+.product-card-img { background:linear-gradient(135deg,#fdf0f5,#eef3fd); border-radius:20px; }
+.product-spec { background:rgba(150,196,255,.18); color:#5a7fc0; border-radius:9999px; }
+.product-tagline { color:#c99ab5; }
+.product-card-body p, .product-fact, .feature-card p, .value-card p, .quality-card p, .contact-info-card p, .timeline-content p { color:#9b8496; }
+.product-facts, .product-card-footer { border-top-color:#fbe9f2; }
+.product-card-footer a, .contact-info-card a { color:#ec6ba9; }
+.feature-icon { background:linear-gradient(135deg,rgba(248,168,205,.25),rgba(197,179,246,.25)); color:#ec6ba9; }
+.quality-icon, .ci-icon { background:rgba(197,179,246,.22); color:#8a6fd8; border-radius:16px; }
+.app-item { background:#fdf0f5; border-radius:28px; }
+.app-item:nth-child(2n) { background:#eef3fd; }
+.app-item:nth-child(3n) { background:#f0fbf2; }
+.app-item:hover { background:#fff; border-color:#f4b8d6; }
+.stats-section { background:linear-gradient(150deg,#5a4460,#3d4a63); }
+.stat-number { color:#f8a8cd; }
+.stat-label { color:#d9c8d6; }
+.cta-section { background:linear-gradient(120deg,#ec6ba9,#8a6fd8); border:none; border-radius:32px; }
+.cta-section p { color:#fbe3ee; }
+.btn-accent { background:#fff; color:#ec6ba9; font-weight:600; }
+.btn-accent:hover { background:#fdf0f5; color:#d84f92; }
+.about-image, .map-container { border-color:#f8dfeb; border-radius:28px; }
+.timeline::before { background:#f4b8d6; }
+.timeline-item::before { background:#ec6ba9; border-color:#fffafc; box-shadow:0 0 0 3px rgba(236,107,169,.2); }
+.timeline-year { color:#ec6ba9; }
+.value-card { border-left:6px solid #f8a8cd; }
+.value-card:nth-child(2) { border-left-color:#c5b3f6; }
+.form-control, .form-select { background:#fdf7fa; border-color:#f0d5e2; border-radius:14px; }
+.form-control:focus, .form-select:focus { background:#fff; border-color:#ec6ba9; box-shadow:0 0 0 4px rgba(236,107,169,.13); }
+.footer { background:#fdf0f5; border-top-color:#f8dfeb; color:#9b8496; }
+.footer h5, .footer a:hover { color:#4a3b4a; }
+.footer a { color:#9b8496; }
+.footer-bottom { border-top-color:#f0d5e2; }
+.footer .brand-icon-sm { background:rgba(236,107,169,.12); color:#ec6ba9; }
+.contact-float .float-phone { background:#ec6ba9; }
+.contact-float .float-inquiry { background:#8a6fd8; }
+.contact-float .float-email { background:#5a7fc0; }
+.back-to-top { background:rgba(255,250,252,.9); border-color:#f4b8d6; color:#ec6ba9; }
+.toast-msg { background:#4a3b4a; }
+.btn-pill-light { background:#fdf0f5; color:#4a3b4a; }
+.btn-pill-light:hover { background:#fbe3ee; }
+.modal-content { border-radius:28px !important; }
+.modal-header.bg-light, .modal-footer.bg-light { background:#fdf0f5 !important; }
+a:focus-visible, button:focus-visible { outline-color:#ec6ba9; }
+::selection { background:rgba(236,107,169,.2); }
