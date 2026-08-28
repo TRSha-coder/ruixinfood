@@ -1,56 +1,114 @@
-/* ═══ 森野绿意 Forest — 天然食品绿色系 ═══ */
-:root { --primary:#2e7d32; --primary-dark:#1b5e20; --primary-light:#66bb6a; --dark:#1c2b1f; --gray-100:#eef4ea; --gray-600:#5f705f; --white:#f7faf4; }
-body { background:#f7faf4; color:#1c2b1f; }
-.top-bar { background:#14231a; color:#a3b8a3; }
-.top-bar a { color:#a3b8a3; }
-.navbar { background:rgba(20,35,26,.85) !important; }
-.nav-link { color:#bccfbc !important; }
-.hero-section { background:#14231a; }
-.hero-section::before { background:radial-gradient(circle, rgba(102,187,106,.16) 0%, transparent 70%); }
-.hero-section::after { background:radial-gradient(circle, rgba(46,125,50,.14) 0%, transparent 70%); }
-.hero-badge { color:#e6f0e0; }
-.hero-badge .dot { background:#66bb6a; }
-.hero-section h1 .highlight { background:linear-gradient(180deg,#e8f5e9 0%,#81c784 100%); -webkit-background-clip:text; background-clip:text; }
-.hero-section .lead { color:#a3b8a3; }
-.hero-stat span { color:#a3b8a3; }
-.btn-primary-custom, .btn-accent { background:#2e7d32; }
-.btn-primary-custom:hover, .btn-accent:hover { background:#388e3c; }
-.contact-strip { background:#eef4ea; border-bottom-color:#dbe7d3; }
-.section-badge { background:rgba(46,125,50,.1); color:#2e7d32; }
-.section-header h2 em, .about-content h2 em, .timeline-year { color:#2e7d32; }
-.section-header p, .about-content p { color:#5f705f; }
-.filter-btn { background:#eef4ea; color:#1c2b1f; }
-.filter-btn:hover { background:#dfeada; }
-.filter-btn.active { background:#2e7d32; color:#fff; }
-.product-card, .feature-card, .value-card, .quality-card, .contact-info-card, .contact-form-wrapper, .timeline-content { background:#fff; border-color:#dbe7d3; border-radius:14px; }
-.product-card:hover, .feature-card:hover, .quality-card:hover, .contact-info-card:hover, .timeline-content:hover { border-color:#a5c99a; box-shadow:0 8px 24px rgba(27,94,32,.08); }
-.product-card-img { background:#eef4ea; }
-.product-spec { background:rgba(46,125,50,.08); color:#2e7d32; }
-.product-tagline, .product-card-body p, .product-fact, .feature-card p, .value-card p, .quality-card p, .contact-info-card p, .timeline-content p { color:#5f705f; }
-.product-facts, .product-card-footer { border-top-color:#eef4ea; }
-.product-card-footer a { color:#2e7d32; }
-.feature-icon, .quality-icon, .ci-icon { background:rgba(46,125,50,.1); color:#2e7d32; }
-.app-item { background:#eef4ea; border-radius:14px; }
-.app-item:hover { background:#fff; border-color:#a5c99a; }
-.stats-section { background:#14231a; }
-.stat-label { color:#a3b8a3; }
-.cta-section { background:#1b5e20; }
-.cta-section::before { background:radial-gradient(circle, rgba(255,255,255,.1) 0%, transparent 70%); }
-.cta-section p { color:#c8e6c9; }
-.about-image, .map-container { border-color:#dbe7d3; }
-.timeline::before { background:#dbe7d3; }
-.timeline-item::before { background:#2e7d32; border-color:#f7faf4; box-shadow:0 0 0 3px rgba(46,125,50,.16); }
-.value-card { border-left-color:#2e7d32; }
-.form-control:focus, .form-select:focus { border-color:#2e7d32; box-shadow:0 0 0 4px rgba(46,125,50,.14); }
-.footer { background:#eef4ea; border-top-color:#dbe7d3; color:#5f705f; }
-.footer h5, .footer a:hover { color:#1c2b1f; }
-.footer a { color:#5f705f; }
-.footer-bottom { border-top-color:#c9dbc0; }
-.contact-float .float-phone { background:#2e7d32; }
-.contact-float .float-inquiry { background:#14231a; }
-.contact-float .float-email { background:#5f705f; }
-.btn-pill-light { background:#eef4ea; color:#1c2b1f; }
-.btn-pill-light:hover { background:#dfeada; }
-a:focus-visible, button:focus-visible { outline-color:#2e7d32; }
-::selection { background:rgba(46,125,50,.2); }
-.contact-info-card a, .contact-strip a, .product-card-footer a { color:#2e7d32; }
+/* ═══ 森野绿意 Forest — 天然食品绿色系（正式主题） ═══ */
+:root {
+  --primary: #2e7d32;
+  --primary-dark: #1b5e20;
+  --primary-light: #66bb6a;
+  --primary-focus: #388e3c;
+  --dark: #1c2b1f;
+  --gray-100: #eef4ea;
+  --gray-200: #dbe7d3;
+  --gray-600: #5f705f;
+  --white: #f7faf4;
+  --surface: #ffffff;
+  --canvas: #f7faf4;
+}
+body { background: #f7faf4; color: #1c2b1f; }
+.top-bar { background: #14231a; color: #a3b8a3; }
+.top-bar a { color: #a3b8a3; }
+.navbar { background: rgba(20, 35, 26, 0.88) !important; }
+.nav-link { color: #bccfbc !important; }
+.btn-primary-custom { background: #2e7d32; }
+.btn-primary-custom:hover { background: #388e3c; }
+.contact-strip { background: #eef4ea; border-bottom-color: #dbe7d3; }
+.section-badge { background: rgba(46, 125, 50, 0.1); color: #2e7d32; }
+.section-header h2 em,
+.about-content h2 em,
+.timeline-year { color: #2e7d32; }
+.section-header p,
+.about-content p { color: #5f705f; }
+.filter-btn { background: #eef4ea; color: #1c2b1f; }
+.filter-btn:hover { background: #dfeada; }
+.filter-btn.active { background: #2e7d32; color: #fff; }
+.product-card,
+.feature-card,
+.value-card,
+.quality-card,
+.contact-info-card,
+.contact-form-wrapper,
+.timeline-content {
+  background: #fff;
+  border-color: #dbe7d3;
+  border-radius: 14px;
+}
+.product-card:hover,
+.feature-card:hover,
+.quality-card:hover,
+.contact-info-card:hover,
+.timeline-content:hover {
+  border-color: #a5c99a;
+  box-shadow: 0 8px 24px rgba(27, 94, 32, 0.08);
+}
+.product-card-img { background: #eef4ea; }
+.product-spec { background: rgba(46, 125, 50, 0.08); color: #2e7d32; }
+.product-tagline,
+.product-card-body p,
+.product-fact,
+.feature-card p,
+.value-card p,
+.quality-card p,
+.contact-info-card p,
+.timeline-content p { color: #5f705f; }
+.product-facts,
+.product-card-footer { border-top-color: #eef4ea; }
+.product-card-footer a { color: #2e7d32; }
+.feature-icon,
+.quality-icon,
+.ci-icon { background: rgba(46, 125, 50, 0.1); color: #2e7d32; }
+.app-item { background: #eef4ea; border-radius: 14px; }
+.app-item:hover { background: #fff; border-color: #a5c99a; }
+.stats-section { background: #14231a; }
+.stat-label { color: #a3b8a3; }
+.about-image,
+.map-container { border-color: #dbe7d3; }
+.timeline::before { background: #dbe7d3; }
+.timeline-item::before {
+  background: #2e7d32;
+  border-color: #f7faf4;
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.16);
+}
+.value-card { border-left-color: #2e7d32; }
+.form-control:focus,
+.form-select:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 4px rgba(46, 125, 50, 0.14);
+}
+.footer { background: #eef4ea; border-top-color: #dbe7d3; color: #5f705f; }
+.footer h5,
+.footer a:hover { color: #1c2b1f; }
+.footer a { color: #5f705f; }
+.footer-bottom { border-top-color: #c9dbc0; }
+.contact-float .float-phone { background: #2e7d32; }
+.contact-float .float-inquiry { background: #14231a; }
+.contact-float .float-email { background: #5f705f; }
+.btn-pill-light { background: #eef4ea; color: #1c2b1f; }
+.btn-pill-light:hover { background: #dfeada; }
+a:focus-visible,
+button:focus-visible { outline-color: #2e7d32; }
+::selection { background: rgba(46, 125, 50, 0.2); }
+.contact-info-card a,
+.contact-strip a,
+.product-card-footer a { color: #2e7d32; }
+.trust-strip { background: #fff; border-color: #dbe7d3; }
+.trust-item i { color: #2e7d32; }
+.brand-icon-sm,
+.footer .brand-icon {
+  width: 32px;
+  height: 32px;
+  background: #2e7d32;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+}

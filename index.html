@@ -39,6 +39,9 @@
     </script>
 
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -48,18 +51,22 @@
 
         <style>
         :root {
-            --primary: #0066cc;
-            --primary-dark: #0055b3;
-            --primary-light: #2997ff;
-            --accent: #0066cc;
-            --accent-dark: #0055b3;
-            --dark: #1d1d1f;
-            --dark-light: #272729;
-            --gray-100: #f5f5f7;
-            --gray-200: #e0e0e0;
-            --gray-600: #7a7a7a;
-            --white: #ffffff;
-            --font-body: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "PingFang SC", "Segoe UI", "Microsoft YaHei", Roboto, sans-serif;
+            --primary: #2e7d32;
+            --primary-dark: #1b5e20;
+            --primary-light: #66bb6a;
+            --primary-focus: #388e3c;
+            --accent: #2e7d32;
+            --accent-dark: #1b5e20;
+            --dark: #1c2b1f;
+            --dark-light: #243328;
+            --gray-100: #eef4ea;
+            --gray-200: #dbe7d3;
+            --gray-600: #5f705f;
+            --white: #f7faf4;
+            --canvas: #f7faf4;
+            --surface: #ffffff;
+            --font-display: "Source Serif 4", "Noto Serif SC", "Songti SC", Georgia, serif;
+            --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
             --shadow-sm: none;
             --shadow-md: none;
             --shadow-lg: none;
@@ -70,10 +77,10 @@
 
         html { scroll-behavior: smooth; scroll-padding-top: 76px; }
 
-        ::selection { background: rgba(0, 102, 204, 0.2); }
+        ::selection { background: rgba(46, 125, 50, 0.2); }
 
         a:focus-visible, button:focus-visible, .form-control:focus-visible, .form-select:focus-visible {
-            outline: 2px solid var(--primary-focus, #0071e3);
+            outline: 2px solid var(--primary-focus);
             outline-offset: 2px;
         }
 
@@ -89,9 +96,9 @@
         body {
             font-family: var(--font-body);
             color: var(--dark);
-            background-color: var(--white);
-            line-height: 1.5;
-            letter-spacing: -0.015em;
+            background-color: var(--canvas);
+            line-height: 1.6;
+            letter-spacing: 0;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -99,74 +106,92 @@
 
         /* ─── Top Bar ─── */
         .top-bar {
-            background: #121212;
-            color: #a1a1a6;
+            background: #14231a;
+            color: #a3b8a3;
             font-size: 12px;
             padding: 0.5rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            letter-spacing: -0.01em;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
         }
-        .top-bar a { color: #a1a1a6; text-decoration: none; transition: var(--transition); }
-        .top-bar a:hover { color: var(--white); }
+        .top-bar a { color: #a3b8a3; text-decoration: none; transition: var(--transition); }
+        .top-bar a:hover { color: #e8f5e9; }
         .top-bar .bi { margin-right: 0.3rem; }
 
         /* ─── Navbar ─── */
         .navbar {
-            background: rgba(22, 22, 23, 0.8) !important;
-            backdrop-filter: saturate(180%) blur(20px);
-            -webkit-backdrop-filter: saturate(180%) blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 0.5rem 0;
+            background: rgba(20, 35, 26, 0.88) !important;
+            backdrop-filter: saturate(160%) blur(18px);
+            -webkit-backdrop-filter: saturate(160%) blur(18px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 0.55rem 0;
             transition: var(--transition);
         }
         .navbar.scrolled {
-            background: rgba(22, 22, 23, 0.85) !important;
+            background: rgba(20, 35, 26, 0.94) !important;
         }
         .navbar-brand {
             font-weight: 600;
-            font-size: 14px;
-            color: #f5f5f7 !important;
+            font-size: 15px;
+            color: #f0f7ef !important;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            letter-spacing: -0.02em;
+            gap: 0.55rem;
+            letter-spacing: 0.02em;
         }
         .navbar-brand .brand-icon {
-            width: 32px; height: 32px;
-            background: rgba(255,255,255,0.1);
+            width: 34px; height: 34px;
+            background: var(--primary);
             border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
-            color: #fff; font-size: 1.1rem;
-            box-shadow: none;
+            color: #fff; font-size: 0.95rem;
+            font-weight: 700;
             transition: var(--transition);
         }
         .navbar-brand:hover .brand-icon {
-            background: rgba(255,255,255,0.2);
+            background: var(--primary-light);
+            color: #14231a;
+        }
+        .navbar-toggler { border-color: rgba(255,255,255,0.25); }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28240, 247, 239, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
         }
         .nav-link {
-            font-size: 12px;
+            font-size: 13px;
             font-weight: 400;
-            color: #cccccc !important;
-            padding: 0.5rem 1rem !important;
+            color: #bccfbc !important;
+            padding: 0.5rem 0.9rem !important;
             transition: var(--transition);
             position: relative;
-            letter-spacing: -0.01em;
         }
         .nav-link:hover, .nav-link.active {
-            color: var(--white) !important;
+            color: #f0f7ef !important;
         }
         .nav-link.active::after {
             content: '';
             position: absolute;
             bottom: -2px; left: 50%;
             transform: translateX(-50%);
-            width: 12px; height: 2px;
-            background: var(--white);
+            width: 14px; height: 2px;
+            background: var(--primary-light);
             border-radius: 1px;
         }
+        .btn-nav-cta {
+            background: var(--primary);
+            color: #fff !important;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 0.4rem 1rem !important;
+            border-radius: 9999px;
+            text-decoration: none;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+        .btn-nav-cta:hover {
+            background: var(--primary-light);
+            color: #14231a !important;
+        }
         .btn-lang {
-            border: 1px solid rgba(255,255,255,0.35);
-            color: #f5f5f7;
+            border: 1px solid rgba(255,255,255,0.28);
+            color: #e6f0e0;
             font-size: 11px;
             font-weight: 400;
             padding: 0.25rem 0.75rem;
@@ -177,126 +202,127 @@
         }
         .btn-lang:hover {
             background: rgba(255, 255, 255, 0.1);
-            border-color: var(--white);
-            color: var(--white);
+            border-color: #e6f0e0;
+            color: #fff;
         }
 
         /* ─── Hero Section ─── */
         .hero-section {
-            background: #000000;
-            min-height: 92vh;
+            background:
+                linear-gradient(115deg, rgba(20, 35, 26, 0.96) 0%, rgba(20, 35, 26, 0.82) 42%, rgba(20, 35, 26, 0.55) 100%),
+                url("images/prod_soy_protein_isolate.webp") center / cover no-repeat;
+            min-height: 88vh;
             display: flex;
             align-items: center;
             position: relative;
             overflow: hidden;
-            color: var(--white);
+            color: #f0f7ef;
         }
         .hero-section::before {
             content: '';
             position: absolute;
-            top: -30%; right: -10%;
-            width: 800px; height: 800px;
-            background: radial-gradient(circle, rgba(0, 102, 204, 0.15) 0%, transparent 70%);
-            border-radius: 50%;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 60% 50% at 85% 20%, rgba(102, 187, 106, 0.22) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 40% at 10% 90%, rgba(46, 125, 50, 0.18) 0%, transparent 70%);
             pointer-events: none;
         }
-        .hero-section::after {
-            content: '';
-            position: absolute;
-            bottom: -20%; left: -5%;
-            width: 600px; height: 600px;
-            background: radial-gradient(circle, rgba(41, 151, 255, 0.08) 0%, transparent 70%);
-            border-radius: 50%;
-            pointer-events: none;
+        .hero-section::after { display: none; }
+        .hero-brand {
+            font-family: var(--font-display);
+            font-size: clamp(2.8rem, 7vw, 4.6rem);
+            font-weight: 700;
+            line-height: 1.05;
+            letter-spacing: 0.04em;
+            color: #fff;
+            margin-bottom: 1.25rem;
+            animation: heroRise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
         }
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            padding: 0.4rem 1rem;
-            border-radius: 9999px;
-            font-size: 13px;
-            margin-bottom: 1.5rem;
-            color: #f5f5f7;
-            letter-spacing: -0.01em;
+        .hero-brand .en-sub {
+            display: block;
+            font-family: var(--font-body);
+            font-size: clamp(0.85rem, 1.5vw, 1rem);
+            font-weight: 400;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #a3b8a3;
+            margin-top: 0.65rem;
         }
-        .hero-badge .dot {
-            width: 6px; height: 6px;
-            background: var(--primary-light);
-            border-radius: 50%;
-            animation: pulse 2s infinite;
+        .hero-section h1 {
+            font-family: var(--font-body);
+            font-size: clamp(1.35rem, 2.8vw, 1.85rem);
+            font-weight: 500;
+            line-height: 1.35;
+            letter-spacing: 0.01em;
+            margin-bottom: 1.1rem;
+            color: #e8f5e9;
+            max-width: 28ch;
+            animation: heroRise 0.9s 0.12s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+        .hero-section h1 .highlight {
+            color: var(--primary-light);
+            -webkit-text-fill-color: unset;
+            background: none;
+        }
+        .hero-section .lead {
+            font-size: 16px;
+            font-weight: 400;
+            color: #a3b8a3;
+            max-width: 42ch;
+            margin-bottom: 2rem;
+            line-height: 1.65;
+            animation: heroRise 0.9s 0.22s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+        .hero-actions {
+            display: flex;
+            gap: 0.85rem;
+            flex-wrap: wrap;
+            animation: heroRise 0.9s 0.32s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+        .hero-visual {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1.2fr 0.9fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 0.85rem;
+            min-height: 420px;
+            animation: heroRise 1s 0.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+        .hero-visual figure {
+            margin: 0;
+            border-radius: 16px;
+            overflow: hidden;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .hero-visual figure:first-child {
+            grid-row: 1 / 3;
+        }
+        .hero-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .hero-visual figure:hover img {
+            transform: scale(1.04);
+        }
+        @keyframes heroRise {
+            from { opacity: 0; transform: translateY(22px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         @keyframes pulse {
             0%, 100% { opacity: 1; }
             50% { opacity: 0.4; }
         }
-        .hero-section h1 {
-            font-family: "SF Pro Display", var(--font-body);
-            font-size: clamp(2.2rem, 5vw, 3.5rem);
-            font-weight: 600;
-            line-height: 1.07;
-            letter-spacing: -0.03em;
-            margin-bottom: 1.5rem;
-        }
-        .hero-section h1 .highlight {
-            background: linear-gradient(180deg, #ffffff 0%, #a1a1a6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .hero-section .lead {
-            font-size: 19px;
-            font-weight: 300;
-            color: #a1a1a6;
-            max-width: 580px;
-            margin-bottom: 2rem;
-            line-height: 1.47;
-            letter-spacing: -0.015em;
-        }
-        .hero-stats {
-            display: flex;
-            gap: 3rem;
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .hero-stat strong {
-            display: block;
-            font-size: 28px;
-            font-weight: 600;
-            color: var(--white);
-            letter-spacing: -0.02em;
-        }
-        .hero-stat span {
-            font-size: 12px;
-            color: #a1a1a6;
-            letter-spacing: -0.01em;
-        }
-        .hero-img-wrapper {
-            position: relative;
-            text-align: center;
-        }
-        .hero-img-wrapper img {
-            max-width: 100%;
-            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));
-            border-radius: 18px;
-            transition: var(--transition);
-        }
-        .hero-img-wrapper img:hover {
-            transform: scale(1.01);
-            filter: drop-shadow(0 25px 50px rgba(0,0,0,0.6));
-        }
 
-        /* ─── Buttons ─── */
         .btn-primary-custom, .btn-accent {
             background: var(--primary);
-            color: var(--white);
+            color: #fff;
             border: none;
-            padding: 11px 24px;
+            padding: 12px 26px;
             border-radius: 9999px;
-            font-weight: 400;
+            font-weight: 500;
             font-size: 15px;
             transition: var(--transition);
             text-decoration: none;
@@ -305,19 +331,18 @@
             gap: 0.4rem;
             box-shadow: none !important;
             cursor: pointer;
-            letter-spacing: -0.01em;
         }
         .btn-primary-custom:hover, .btn-accent:hover {
-            background: var(--primary-focus, #0071e3);
-            color: var(--white);
+            background: var(--primary-focus);
+            color: #fff;
         }
         .btn-primary-custom:active, .btn-accent:active {
             transform: scale(0.96);
         }
         .btn-outline-custom {
-            border: 1px solid rgba(255,255,255,0.45);
-            color: var(--white);
-            padding: 11px 24px;
+            border: 1px solid rgba(255,255,255,0.4);
+            color: #f0f7ef;
+            padding: 12px 26px;
             border-radius: 9999px;
             font-weight: 400;
             font-size: 15px;
@@ -328,12 +353,11 @@
             gap: 0.4rem;
             background: transparent;
             cursor: pointer;
-            letter-spacing: -0.01em;
         }
         .btn-outline-custom:hover {
             background: rgba(255, 255, 255, 0.1);
-            border-color: var(--white);
-            color: var(--white);
+            border-color: #fff;
+            color: #fff;
         }
         .btn-outline-custom:active {
             transform: scale(0.96);
@@ -348,38 +372,37 @@
             font-size: 14px;
             transition: var(--transition);
             cursor: pointer;
-            letter-spacing: -0.01em;
         }
-        .btn-pill-light:hover { background: #e8e8ed; color: var(--dark); }
+        .btn-pill-light:hover { background: #dfeada; color: var(--dark); }
         .btn-pill-light:active { transform: scale(0.96); }
 
         /* ─── Section Styles ─── */
-        .section-padding { padding: 80px 0; }
+        .section-padding { padding: 88px 0; }
         .section-bg { background: var(--gray-100); }
 
         .section-header {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 3.5rem;
         }
         .section-badge {
             display: inline-block;
             padding: 0.3rem 0.9rem;
-            background: rgba(0, 102, 204, 0.08);
+            background: rgba(46, 125, 50, 0.1);
             border: none;
             border-radius: 9999px;
             font-size: 11px;
             color: var(--primary);
             font-weight: 600;
-            letter-spacing: 0.08em;
+            letter-spacing: 0.1em;
             text-transform: uppercase;
             margin-bottom: 1.2rem;
         }
         .section-header h2 {
-            font-family: "SF Pro Display", var(--font-body);
-            font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+            font-family: var(--font-display);
+            font-size: clamp(1.7rem, 3.2vw, 2.4rem);
             font-weight: 600;
-            color: var(--dark);
-            letter-spacing: -0.025em;
+            color: #14231a;
+            letter-spacing: 0.01em;
             margin-bottom: 1rem;
         }
         .section-header h2 em {
@@ -387,19 +410,52 @@
             color: var(--primary);
         }
         .section-header p {
-            color: var(--gray-600);
-            font-size: 17px;
+            color: #4a5c4a;
+            font-size: 16px;
             font-weight: 400;
-            max-width: 600px;
+            max-width: 560px;
             margin: 0 auto;
-            line-height: 1.47;
-            letter-spacing: -0.015em;
+            line-height: 1.65;
+        }
+
+        /* ─── Trust Strip ─── */
+        .trust-strip {
+            background: var(--surface);
+            border-block: 1px solid var(--gray-200);
+            padding: 1.75rem 0;
+        }
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.25rem;
+        }
+        .trust-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.85rem;
+        }
+        .trust-item i {
+            font-size: 1.35rem;
+            color: var(--primary);
+            margin-top: 0.15rem;
+        }
+        .trust-item strong {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.15rem;
+        }
+        .trust-item span {
+            font-size: 12.5px;
+            color: var(--gray-600);
+            line-height: 1.45;
         }
 
         /* ─── Contact Strip ─── */
         .contact-strip {
             background: var(--gray-100);
-            border-bottom: 1px solid #e5e5e7;
+            border-bottom: 1px solid var(--gray-200);
             color: var(--dark);
             padding: 0.75rem 0;
             font-size: 13px;
@@ -441,26 +497,27 @@
         }
 
         .product-card {
-            background: var(--white);
-            border-radius: 18px;
+            background: var(--surface);
+            border-radius: 14px;
             overflow: hidden;
             box-shadow: none;
             transition: var(--transition);
             height: 100%;
-            border: 1px solid #e5e5e7;
+            border: 1px solid var(--gray-200);
             padding: 1.25rem;
             display: flex;
             flex-direction: column;
         }
         .product-card:hover {
-            border-color: #d2d2d7;
+            border-color: #a5c99a;
+            box-shadow: 0 8px 24px rgba(27, 94, 32, 0.08);
         }
         .product-card-img {
-            height: 220px;
+            height: 200px;
             overflow: hidden;
             background: var(--gray-100);
             border-radius: 12px;
-            padding: 1.5rem;
+            padding: 1.25rem;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -474,7 +531,7 @@
         }
         .product-card:hover .product-card-img img {
             transform: scale(1.05);
-            filter: drop-shadow(0 8px 24px rgba(0,0,0,0.12));
+            filter: drop-shadow(0 8px 24px rgba(27,94,32,0.12));
         }
         .product-card-body {
             padding: 1.25rem 0.5rem 0.5rem 0.5rem;
@@ -491,12 +548,11 @@
             margin-bottom: 0.5rem;
         }
         .product-card-body h3 {
-            font-family: "SF Pro Text", var(--font-body);
-            font-size: 19px;
+            font-family: var(--font-body);
+            font-size: 18px;
             font-weight: 600;
             color: var(--dark);
             margin-bottom: 0.4rem;
-            letter-spacing: -0.015em;
         }
         .product-spec {
             font-size: 12px;
@@ -504,7 +560,7 @@
             font-weight: 400;
             margin-bottom: 0.8rem;
             padding: 0.2rem 0.6rem;
-            background: rgba(0,102,204,0.06);
+            background: rgba(46,125,50,0.08);
             border-radius: 4px;
             display: inline-block;
             width: fit-content;
@@ -561,25 +617,26 @@
 
         /* ─── Features / Why Us ─── */
         .feature-card {
-            background: var(--white);
-            border-radius: 18px;
-            padding: 2.5rem;
-            text-align: center;
+            background: var(--surface);
+            border-radius: 14px;
+            padding: 2.25rem 1.75rem;
+            text-align: left;
             box-shadow: none;
             transition: var(--transition);
             height: 100%;
-            border: 1px solid #e5e5e7;
+            border: 1px solid var(--gray-200);
         }
         .feature-card:hover {
-            border-color: #d2d2d7;
+            border-color: #a5c99a;
+            box-shadow: 0 8px 24px rgba(27, 94, 32, 0.08);
         }
         .feature-icon {
-            width: 64px; height: 64px;
-            background: rgba(0,102,204,0.06);
-            border-radius: 50%;
+            width: 48px; height: 48px;
+            background: rgba(46,125,50,0.1);
+            border-radius: 12px;
             display: flex; align-items: center; justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 1.6rem;
+            margin: 0 0 1.25rem;
+            font-size: 1.25rem;
             color: var(--primary);
         }
         .feature-card h3 {
@@ -587,56 +644,62 @@
             font-weight: 600;
             color: var(--dark);
             margin-bottom: 0.8rem;
-            letter-spacing: -0.015em;
         }
         .feature-card p {
             font-size: 14px;
             color: var(--gray-600);
-            line-height: 1.47;
-            letter-spacing: -0.01em;
+            line-height: 1.55;
         }
 
         /* ─── Application Areas ─── */
         .app-grid {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
-            gap: 1.25rem;
+            gap: 1rem;
         }
         .app-item {
             text-align: center;
-            padding: 2rem 1rem;
+            padding: 1.75rem 1rem;
             background: var(--gray-100);
-            border-radius: 18px;
+            border-radius: 14px;
             box-shadow: none;
             transition: var(--transition);
             border: 1px solid transparent;
         }
         .app-item:hover {
-            background: var(--white);
-            border-color: #d2d2d7;
+            background: var(--surface);
+            border-color: #a5c99a;
             transform: translateY(-2px);
         }
         .app-item .app-icon {
-            font-size: 2.5rem;
-            margin-bottom: 0.8rem;
-            transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-            display: inline-block;
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 0.85rem;
+            border-radius: 12px;
+            background: rgba(46,125,50,0.1);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.35rem;
+            transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), background 0.2s, color 0.2s;
         }
         .app-item:hover .app-icon {
-            transform: scale(1.15);
+            transform: scale(1.08);
+            background: var(--primary);
+            color: #fff;
         }
         .app-item h4 {
             font-size: 14px;
             font-weight: 600;
             color: var(--dark);
-            letter-spacing: -0.012em;
         }
 
         /* ─── Stats Section ─── */
         .stats-section {
-            background: #1d1d1f;
-            color: var(--white);
-            padding: 80px 0;
+            background: #14231a;
+            color: #f0f7ef;
+            padding: 72px 0;
             position: relative;
         }
         .stat-item {
@@ -644,61 +707,57 @@
             padding: 1rem;
         }
         .stat-number {
-            font-family: "SF Pro Display", var(--font-body);
+            font-family: var(--font-display);
             font-size: 48px;
             font-weight: 600;
-            color: var(--white);
+            color: #fff;
             display: block;
-            letter-spacing: -0.03em;
         }
         .stat-label {
             font-size: 13px;
-            color: #a1a1a6;
+            color: #a3b8a3;
             margin-top: 0.5rem;
-            letter-spacing: -0.01em;
         }
 
         /* ─── CTA Section ─── */
         .cta-section {
-            background: #1d1d1f;
-            border-radius: 24px;
-            padding: 5rem 3rem;
+            background: #1b5e20;
+            border-radius: 20px;
+            padding: 4.5rem 3rem;
             text-align: center;
-            color: var(--white);
+            color: #fff;
             position: relative;
             overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.05);
+            border: none;
         }
         .cta-section::before {
             content: '';
             position: absolute;
             top: -50%; right: -25%;
             width: 500px; height: 500px;
-            background: radial-gradient(circle, rgba(0,102,204,0.12) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
             border-radius: 50%;
             pointer-events: none;
         }
-        .cta-section h2 { 
-            font-family: "SF Pro Display", var(--font-body);
-            font-size: 2.2rem; 
-            font-weight: 600; 
-            margin-bottom: 1rem; 
-            letter-spacing: -0.025em;
+        .cta-section h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.6rem, 3vw, 2.1rem);
+            font-weight: 600;
+            margin-bottom: 1rem;
         }
-        .cta-section p { 
-            font-size: 17px; 
-            color: #a1a1a6; 
-            margin-bottom: 2.5rem; 
-            font-weight: 300;
-            letter-spacing: -0.015em;
+        .cta-section p {
+            font-size: 16px;
+            color: #c8e6c9;
+            margin-bottom: 2.25rem;
+            font-weight: 400;
         }
         .btn-accent {
-            background: var(--primary);
-            color: var(--white);
+            background: #fff;
+            color: #1b5e20;
             border: none;
             padding: 12px 32px;
             border-radius: 9999px;
-            font-weight: 400;
+            font-weight: 600;
             font-size: 15px;
             transition: var(--transition);
             text-decoration: none;
@@ -707,19 +766,18 @@
             gap: 0.4rem;
         }
         .btn-accent:hover {
-            background: var(--primary-focus, #0071e3);
-            color: var(--white);
+            background: #e8f5e9;
+            color: #14231a;
         }
 
         /* ─── About Section ─── */
         .about-content h2 {
-            font-family: "SF Pro Display", var(--font-body);
-            font-size: 2.2rem;
+            font-family: var(--font-display);
+            font-size: clamp(1.6rem, 3vw, 2.1rem);
             font-weight: 600;
             color: var(--dark);
             margin-bottom: 1.5rem;
-            letter-spacing: -0.025em;
-            line-height: 1.15;
+            line-height: 1.25;
         }
         .about-content h2 em {
             font-style: normal;
@@ -1108,7 +1166,8 @@
 
         /* ─── Responsive ─── */
         @media (max-width: 991px) {
-            .hero-stats { flex-wrap: wrap; gap: 1.5rem; }
+            .trust-grid { grid-template-columns: repeat(2, 1fr); }
+            .hero-visual { min-height: 320px; margin-top: 2.5rem; }
             .app-grid { grid-template-columns: repeat(3, 1fr); }
             .timeline::before { left: 0; }
             .timeline-item { padding-right: 0; padding-left: 2rem; justify-content: flex-start; }
@@ -1116,18 +1175,26 @@
             .timeline-item::before { left: -6px; }
         }
         @media (max-width: 767px) {
-            .hero-stats { flex-direction: column; gap: 1rem; }
+            .trust-grid { grid-template-columns: 1fr; gap: 1rem; }
+            .hero-section { min-height: auto; padding: 4.5rem 0 3.5rem; }
             .app-grid { grid-template-columns: repeat(2, 1fr); }
-            .section-padding { padding: 48px 0; }
+            .section-padding { padding: 56px 0; }
+            .contact-float .float-email { display: none; }
             .contact-float a span:not(.bi) { display: none; }
             .contact-float a { padding: 0.65rem; border-radius: 50%; }
         }
         @media (max-width: 480px) {
             .app-grid { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
+            .hero-brand { font-size: 2.4rem; }
         }
     </style>
     <!-- 正式主题：森野绿意 Forest（需在内联样式之后加载以覆盖生效；其余风格见 variants/index.html） -->
     <link rel="stylesheet" href="variants/themes/forest.css">
+    <!-- Vercel Web Analytics -->
+    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 
@@ -1152,7 +1219,7 @@
     <nav class="navbar navbar-expand-lg sticky-top" id="navbar">
         <div class="container">
             <a class="navbar-brand" href="#home">
-                <div class="brand-icon">🧪</div>
+                <div class="brand-icon">睿</div>
                 <span class="t-zh">睿鑫食品</span>
                 <span class="t-en">Ruixin Food</span>
             </a>
@@ -1165,7 +1232,10 @@
                     <li class="nav-item"><a class="nav-link" href="#products"><span class="t-zh">产品中心</span><span class="t-en">Products</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="#about"><span class="t-zh">关于我们</span><span class="t-en">About</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact"><span class="t-zh">联系我们</span><span class="t-en">Contact</span></a></li>
-                    <li class="nav-item ms-2">
+                    <li class="nav-item ms-2 d-none d-lg-block">
+                        <a class="btn-nav-cta" href="#contact"><span class="t-zh">获取报价</span><span class="t-en">Get Quote</span></a>
+                    </li>
+                    <li class="nav-item ms-1">
                         <button class="btn-lang" onclick="toggleLang()" aria-label="Switch language / 切换语言">EN / 中</button>
                     </li>
                 </ul>
@@ -1175,51 +1245,42 @@
 
     <!-- Hero Section -->
     <section class="hero-section" id="home">
-        <div class="container">
+        <div class="container position-relative" style="z-index:1">
             <div class="row align-items-center">
-                <div class="col-lg-7" data-aos="fade-right" data-aos-duration="1000">
-                    <div class="hero-badge">
-                        <span class="dot"></span>
-                        <span class="t-zh">专注食品添加剂贸易服务</span>
-                        <span class="t-en">Professional Food Additive Trading</span>
+                <div class="col-lg-6">
+                    <div class="hero-brand">
+                        <span class="t-zh">睿鑫食品</span>
+                        <span class="t-en">Ruixin Food</span>
+                        <span class="en-sub">Rugao · Food Ingredients</span>
                     </div>
                     <h1>
-                        <span class="t-zh">为食品工业提供<br><span class="highlight">安全可靠</span>的配料方案</span>
-                        <span class="t-en">Providing <span class="highlight">Safe & Reliable</span><br>Ingredient Solutions</span>
+                        <span class="t-zh">为食品工业提供<span class="highlight">安全可靠</span>的配料方案</span>
+                        <span class="t-en">Safe &amp; reliable ingredient solutions for food manufacturers</span>
                     </h1>
                     <p class="lead">
-                        <span class="t-zh">如皋市睿鑫食品添加剂有限公司，立足江苏如皋，辐射全国市场。我们致力于为食品生产企业提供高品质、全品类的食品添加剂供应与专业技术支持。</span>
-                        <span class="t-en">Rugao Ruixin Food Additives Co., Ltd. is based in Rugao, Jiangsu, serving the national market with high-quality food additive supply and professional technical support.</span>
+                        <span class="t-zh">立足江苏如皋，专注防腐保鲜、品质改良与植物蛋白配料供应，服务饮料、烘焙、乳品与肉制品企业。</span>
+                        <span class="t-en">Based in Rugao, Jiangsu — supplying preservatives, quality improvers and plant protein ingredients nationwide.</span>
                     </p>
-                    <div class="d-flex gap-3 flex-wrap">
-                        <a href="#products" class="btn-primary-custom">
-                            <span class="t-zh">探索产品</span><span class="t-en">Explore Products</span> <i class="bi bi-arrow-right"></i>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn-primary-custom">
+                            <span class="t-zh">获取报价</span><span class="t-en">Get Quote</span> <i class="bi bi-arrow-right"></i>
                         </a>
-                        <a href="#contact" class="btn-outline-custom">
-                            <span class="t-zh">获取报价</span><span class="t-en">Get Quote</span>
+                        <a href="#products" class="btn-outline-custom">
+                            <span class="t-zh">浏览产品</span><span class="t-en">View Products</span>
                         </a>
-                    </div>
-                    <div class="hero-stats">
-                        <div class="hero-stat">
-                            <strong>200+</strong>
-                            <span class="t-zh">产品规格</span>
-                            <span class="t-en">Product Specs</span>
-                        </div>
-                        <div class="hero-stat">
-                            <strong>500+</strong>
-                            <span class="t-zh">合作客户</span>
-                            <span class="t-en">Partner Clients</span>
-                        </div>
-                        <div class="hero-stat">
-                            <strong>10+</strong>
-                            <span class="t-zh">行业经验</span>
-                            <span class="t-en">Years Experience</span>
-                        </div>
                     </div>
                 </div>
-                <div class="col-lg-5 d-none d-lg-block" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="hero-img-wrapper">
-                        <img src="images/food_lab_hero.svg" alt="睿鑫食品实验室">
+                <div class="col-lg-6 d-none d-lg-block">
+                    <div class="hero-visual" aria-hidden="true">
+                        <figure>
+                            <img src="images/prod_potassium_sorbate.webp" alt="" loading="eager" fetchpriority="high" width="640" height="800">
+                        </figure>
+                        <figure>
+                            <img src="images/prod_soy_protein_isolate.webp" alt="" loading="eager" width="400" height="400">
+                        </figure>
+                        <figure>
+                            <img src="images/prod_dehydrated_scallion.webp" alt="" loading="eager" width="400" height="400">
+                        </figure>
                     </div>
                 </div>
             </div>
@@ -1253,26 +1314,24 @@
                     <span class="t-en">Core Products Covering <em>Diverse Applications</em></span>
                 </h2>
                 <p>
-                    <span class="t-zh">主营核心产品，覆盖防腐、保鲜与配料应用场景</span>
-                    <span class="t-en">Core products covering preservation, freshness retention, and ingredient application scenarios</span>
+                    <span class="t-zh">按品类浏览防腐保鲜、品质改良、植物蛋白与天然风味配料</span>
+                    <span class="t-en">Browse by category: preservatives, improvers, plant protein, and natural flavors</span>
                 </p>
             </div>
 
-            <!-- Product Filter -->
+            <!-- Product Filter by category -->
             <div class="product-filter" data-aos="fade-up">
-                <button class="filter-btn active" data-filter="all"><span class="t-zh">全部</span><span class="t-en">All</span></button>
-                <button class="filter-btn" data-filter="potassium-sorbate"><span class="t-zh">山梨酸钾</span><span class="t-en">Potassium Sorbate</span></button>
-                <button class="filter-btn" data-filter="sorbic-acid"><span class="t-zh">山梨酸</span><span class="t-en">Sorbic Acid</span></button>
-                <button class="filter-btn" data-filter="calcium-propionate"><span class="t-zh">丙酸钙</span><span class="t-en">Calcium Propionate</span></button>
-                <button class="filter-btn" data-filter="phosphate"><span class="t-zh">磷酸盐</span><span class="t-en">Phosphates</span></button>
-                <button class="filter-btn" data-filter="soy-protein"><span class="t-zh">大豆分离蛋白</span><span class="t-en">Soy Protein Isolate</span></button>
-                <button class="filter-btn" data-filter="dehydrated-scallion"><span class="t-zh">脱水香葱</span><span class="t-en">Dehydrated Scallion</span></button>
+                <button class="filter-btn active" data-filter="all"><span class="t-zh">全部品类</span><span class="t-en">All</span></button>
+                <button class="filter-btn" data-filter="preservative"><span class="t-zh">防腐保鲜</span><span class="t-en">Preservatives</span></button>
+                <button class="filter-btn" data-filter="improver"><span class="t-zh">品质改良</span><span class="t-en">Improvers</span></button>
+                <button class="filter-btn" data-filter="protein"><span class="t-zh">植物蛋白</span><span class="t-en">Plant Protein</span></button>
+                <button class="filter-btn" data-filter="flavor"><span class="t-zh">天然风味</span><span class="t-en">Natural Flavor</span></button>
             </div>
 
             <!-- Product Grid -->
             <div class="row g-4" id="productGrid">
                 <!-- 山梨酸钾 -->
-                <div class="col-lg-4 col-md-6 product-item" data-category="potassium-sorbate" data-aos="fade-up">
+                <div class="col-lg-4 col-md-6 product-item" data-category="preservative" data-aos="fade-up">
                     <div class="product-card">
                         <div class="product-card-img">
                             <img src="images/prod_potassium_sorbate.webp" alt="山梨酸钾" loading="lazy" decoding="async">
@@ -1288,14 +1347,14 @@
                             </div>
                             <div class="product-card-footer">
                                 <span class="note"><span class="t-zh">适用于饮料与乳制品体系</span><span class="t-en">For beverage and dairy systems</span></span>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#modal-potassium-sorbate"><span class="t-zh">获取规格</span><span class="t-en">Get Specs</span> <i class="bi bi-arrow-right"></i></a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#modal-potassium-sorbate"><span class="t-zh">查看规格 / 询价</span><span class="t-en">Specs / Inquire</span> <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- 山梨酸 -->
-                <div class="col-lg-4 col-md-6 product-item" data-category="sorbic-acid" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-4 col-md-6 product-item" data-category="preservative" data-aos="fade-up" data-aos-delay="100">
                     <div class="product-card">
                         <div class="product-card-img">
                             <img src="images/prod_sorbic_acid.webp" alt="山梨酸" loading="lazy" decoding="async">
@@ -1311,14 +1370,14 @@
                             </div>
                             <div class="product-card-footer">
                                 <span class="note"><span class="t-zh">适用于酱料与调味品体系</span><span class="t-en">For sauces and condiment systems</span></span>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#modal-sorbic-acid"><span class="t-zh">获取规格</span><span class="t-en">Get Specs</span> <i class="bi bi-arrow-right"></i></a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#modal-sorbic-acid"><span class="t-zh">查看规格 / 询价</span><span class="t-en">Specs / Inquire</span> <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- 丙酸钙 -->
-                <div class="col-lg-4 col-md-6 product-item" data-category="calcium-propionate" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-4 col-md-6 product-item" data-category="preservative" data-aos="fade-up" data-aos-delay="200">
                     <div class="product-card">
                         <div class="product-card-img">
                             <img src="images/prod_calcium_propionate.webp" alt="丙酸钙" loading="lazy" decoding="async">
@@ -1334,14 +1393,14 @@
                             </div>
                             <div class="product-card-footer">
                                 <span class="note"><span class="t-zh">适用于烘焙与面制品体系</span><span class="t-en">For bakery and flour-based systems</span></span>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#modal-calcium-propionate"><span class="t-zh">获取规格</span><span class="t-en">Get Specs</span> <i class="bi bi-arrow-right"></i></a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#modal-calcium-propionate"><span class="t-zh">查看规格 / 询价</span><span class="t-en">Specs / Inquire</span> <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- 磷酸盐 -->
-                <div class="col-lg-4 col-md-6 product-item" data-category="phosphate" data-aos="fade-up">
+                <div class="col-lg-4 col-md-6 product-item" data-category="improver" data-aos="fade-up">
                     <div class="product-card">
                         <div class="product-card-img">
                             <img src="images/prod_phosphate.webp" alt="磷酸盐" loading="lazy" decoding="async">
@@ -1357,14 +1416,14 @@
                             </div>
                             <div class="product-card-footer">
                                 <span class="note"><span class="t-zh">适用于肉制品与面制品体系</span><span class="t-en">For meat and flour-based systems</span></span>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#modal-phosphate"><span class="t-zh">获取规格</span><span class="t-en">Get Specs</span> <i class="bi bi-arrow-right"></i></a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#modal-phosphate"><span class="t-zh">查看规格 / 询价</span><span class="t-en">Specs / Inquire</span> <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- 大豆分离蛋白 -->
-                <div class="col-lg-4 col-md-6 product-item" data-category="soy-protein" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-4 col-md-6 product-item" data-category="protein" data-aos="fade-up" data-aos-delay="100">
                     <div class="product-card">
                         <div class="product-card-img">
                             <img src="images/prod_soy_protein_isolate.webp" alt="大豆分离蛋白" loading="lazy" decoding="async">
@@ -1380,14 +1439,14 @@
                             </div>
                             <div class="product-card-footer">
                                 <span class="note"><span class="t-zh">适用于肉制品与健康食品</span><span class="t-en">For meat products and health foods</span></span>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#modal-soy-protein"><span class="t-zh">获取规格</span><span class="t-en">Get Specs</span> <i class="bi bi-arrow-right"></i></a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#modal-soy-protein"><span class="t-zh">查看规格 / 询价</span><span class="t-en">Specs / Inquire</span> <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- 脱水香葱 -->
-                <div class="col-lg-4 col-md-6 product-item" data-category="dehydrated-scallion" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-4 col-md-6 product-item" data-category="flavor" data-aos="fade-up" data-aos-delay="200">
                     <div class="product-card">
                         <div class="product-card-img">
                             <img src="images/prod_dehydrated_scallion.webp" alt="脱水香葱" loading="lazy" decoding="async">
@@ -1403,7 +1462,7 @@
                             </div>
                             <div class="product-card-footer">
                                 <span class="note"><span class="t-zh">适用于方便食品与调味品</span><span class="t-en">For instant foods and condiments</span></span>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#modal-dehydrated-scallion"><span class="t-zh">获取规格</span><span class="t-en">Get Specs</span> <i class="bi bi-arrow-right"></i></a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#modal-dehydrated-scallion"><span class="t-zh">查看规格 / 询价</span><span class="t-en">Specs / Inquire</span> <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1411,6 +1470,46 @@
             </div>
         </div>
     </section>
+
+    <!-- Trust Strip -->
+    <div class="trust-strip">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <i class="bi bi-file-earmark-check"></i>
+                    <div>
+                        <strong><span class="t-zh">国标合规供货</span><span class="t-en">Standards Compliant</span></strong>
+                        <span class="t-zh">按 GB / FCC 等标准对接规格与资料</span>
+                        <span class="t-en">Specs aligned with GB / FCC standards</span>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="bi bi-clipboard2-pulse"></i>
+                    <div>
+                        <strong><span class="t-zh">质检资料齐全</span><span class="t-en">Full Documentation</span></strong>
+                        <span class="t-zh">支持 COA、规格书与样品沟通</span>
+                        <span class="t-en">COA, datasheets and sample support</span>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="bi bi-truck"></i>
+                    <div>
+                        <strong><span class="t-zh">仓储物流配套</span><span class="t-en">Warehousing & Logistics</span></strong>
+                        <span class="t-zh">江苏优先发运，全国稳定供货</span>
+                        <span class="t-en">Priority Jiangsu shipping, nationwide supply</span>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="bi bi-headset"></i>
+                    <div>
+                        <strong><span class="t-zh">技术对接支持</span><span class="t-en">Technical Support</span></strong>
+                        <span class="t-zh">配方选型与法规咨询可沟通</span>
+                        <span class="t-en">Formula selection and regulatory guidance</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Why Choose Us -->
     <section class="section-padding section-bg">
@@ -1467,27 +1566,27 @@
             </div>
             <div class="app-grid">
                 <div class="app-item" data-aos="zoom-in" data-aos-delay="0">
-                    <div class="app-icon">🥤</div>
+                    <div class="app-icon"><i class="bi bi-cup-straw"></i></div>
                     <h4><span class="t-zh">饮料</span><span class="t-en">Beverages</span></h4>
                 </div>
                 <div class="app-item" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="app-icon">🍞</div>
+                    <div class="app-icon"><i class="bi bi-egg-fried"></i></div>
                     <h4><span class="t-zh">烘焙</span><span class="t-en">Bakery</span></h4>
                 </div>
                 <div class="app-item" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="app-icon">🥛</div>
+                    <div class="app-icon"><i class="bi bi-droplet-half"></i></div>
                     <h4><span class="t-zh">乳制品</span><span class="t-en">Dairy</span></h4>
                 </div>
                 <div class="app-item" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="app-icon">🥩</div>
+                    <div class="app-icon"><i class="bi bi-basket2"></i></div>
                     <h4><span class="t-zh">肉制品</span><span class="t-en">Meat</span></h4>
                 </div>
                 <div class="app-item" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="app-icon">🍜</div>
+                    <div class="app-icon"><i class="bi bi-fire"></i></div>
                     <h4><span class="t-zh">调味品</span><span class="t-en">Condiments</span></h4>
                 </div>
                 <div class="app-item" data-aos="zoom-in" data-aos-delay="500">
-                    <div class="app-icon">🍫</div>
+                    <div class="app-icon"><i class="bi bi-gift"></i></div>
                     <h4><span class="t-zh">糖果</span><span class="t-en">Confectionery</span></h4>
                 </div>
             </div>
@@ -1692,7 +1791,7 @@
             <div class="row g-4">
                 <!-- Contact Info -->
                 <div class="col-lg-5" data-aos="fade-right">
-                    <div class="mb-3 p-3 rounded-3" style="background: rgba(0,102,204,0.05); border-left: 4px solid var(--primary);">
+                    <div class="mb-3 p-3 rounded-3" style="background: rgba(46,125,50,0.06); border-left: 4px solid var(--primary);">
                         <strong><span class="t-zh">服务响应说明</span><span class="t-en">Service Response</span></strong>
                         <p class="mb-0 mt-1" style="font-size: 0.88rem; color: var(--gray-600);">
                             <span class="t-zh">支持报价咨询、COA/规格书索取、样品沟通与长期供货洽谈，工作时间内优先响应。</span>
@@ -1815,7 +1914,7 @@
             <div class="row g-4">
                 <div class="col-lg-4">
                     <div class="d-flex align-items-center gap-2 mb-3">
-                        <span class="brand-icon-sm">🧪</span>
+                        <span class="brand-icon" style="width:32px;height:32px;font-size:0.85rem;">睿</span>
                         <span class="fw-bold text-dark" style="font-size: 1.1rem;">
                             <span class="t-zh">睿鑫食品</span><span class="t-en">Ruixin Food</span>
                         </span>
